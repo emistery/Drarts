@@ -78,6 +78,8 @@ include 'navbar.php';
    </div>
   </div>
 
+  
+
       <!-- /BODY-->
 
       <!-- NAV -->

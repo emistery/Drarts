@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,79 +19,18 @@
     <![endif]-->
   </head>
   <body>
-  <!-- LOGO-->
-  <div class="row">
-<div class="container-fluid">
-<div class="media col-md-7">
-  <div class="media-left">
-    <a href="home.php">
-      <img class="media-object" src="Logo.png" alt="Logo" width="100" height="100">
-    </a>
-  </div>
-</div>
-<div class="media col-md-5">
- <a href="#test" class="btn btn-primary" data-toggle="collapse">Login</a>
- <div id="test" class="collapse">
-    <form action="login.php" method="POST" id="signin" class="navbar-form navbar-right" role="form">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
-                        </div>
-
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Login</button>
-                        <button type="button" class="btn btn-primary">Registreer</button>
-                   </form>
-                   </div>
-                   </div>
-</div>
-</div>
-    <!-- /LOGO-->
+  <!-- HEADER-->
+    <?php include 'header.php' ?>
+    <!-- /HEADER-->
 
 
       <!-- NAVBAR-->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="home.php">Home</a></li>
-        <li><a href="gallery.php">Galerij</a></li>
-        <li><a href="art.php">Kunstenaars</a></li>
-
-    
-      </ul>
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Zoeken">
-        </div>
-        <button type="submit" class="btn btn-default">Zoeken</button>
-      </form>
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-
-
-</nav>
+<?php include 'navbar.php' ?>
 
       <!-- /NAVBAR-->
 
       <!-- BODY-->
- <form class="form-horizontal" role="form" method="post" action="form.php">
+  <form class="form-horizontal" role="form" method="post" action="form.php">
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">Naam</label>
     <div class="col-sm-10">
@@ -131,10 +71,7 @@
 
       <!-- NAV -->
 
-<ul class="nav nav-tabs nav-justified  navbar-fixed-bottom">
-  <li class="active" role="presentation"><a href="contact.php">Contact</a></li>
-  <li role="presentation"><a href="legal.php">Legaal</a></li>
-  <li role="presentation"><a href="about.php">Over ons</a></li>
+<?php include 'footer.php' ?>
 </ul>
       <!-- /NAV -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
