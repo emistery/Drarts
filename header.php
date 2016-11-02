@@ -15,7 +15,7 @@
         </div>
         </div>
         
-        <div id="test" class="collapse">
+        <div class="col-md-11" id="test" class="collapse">
           <form action="login.php" method="POST" id="signin" class="navbar-form navbar-right" role="form">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
