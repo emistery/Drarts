@@ -22,6 +22,8 @@
         <li class="<?php echo $file == 'art.php' ? 'active' : null ?>"><a href="art.php">Kunstenaars</a></li>
     
       </ul>
+        
+
       <form class="navbar-form navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Zoeken">

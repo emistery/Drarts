@@ -25,8 +25,7 @@
 
 
       <!-- NAVBAR-->
-<?php include 'navbar.php' ?>
-
+        <?php include 'navbar.php' ?>
       <!-- /NAVBAR-->
 
       <!-- BODY-->
@@ -36,7 +35,7 @@
 
       <!-- NAV -->
 
-<?php include 'footer.php' ?>
+        <?php include 'footer.php' ?>
 </ul>
       <!-- /NAV -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
