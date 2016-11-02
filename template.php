@@ -19,9 +19,9 @@
     <![endif]-->
   </head>
   <body>
-  <!-- LOGO-->
-<?php include 'header.php' ?>
-    <!-- /LOGO-->
+  <!-- HEADER-->
+    <?php include 'header.php' ?>
+    <!-- /HEADER-->
 
 
     	<!-- NAVBAR-->
