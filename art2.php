@@ -42,21 +42,21 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderDali.png" class="thumbnail">
-      <p>Dali</p>
-      <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
+    <a href="Kunst/Beeld/beeldJansen.png" class="thumbnail">
+      <p>Jansen</p>
+      <img src="Kunst/Beeld/beeldJansen.png" alt="beeldJansen" style="width:100px;height:100px">
       <br>
     </a>
   </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/dali1.png" class="thumbnail">
-      <p>dali1</p>
-      <img src="Kunst/Schilder/dali1.png" alt="dali1" style="width:100px;height:100px">
+    <a href="Kunst/Beeld/jansen1.png" class="thumbnail">
+      <p>jansen1</p>
+      <img src="Kunst/Beeld/jansen1.png" alt="jansen1.png" style="width:100px;height:100px">
       <br>
     </a>
   </div>
 
-  <div class="pull-left"> <p class="navbar-text"> Tekst over Dali.</p> </div>
+  <div class="pull-left"> <p class="navbar-text"> Tekst over Jansen.</p> </div>
 
   </div>
 
@@ -64,21 +64,21 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderVanGogh.png" class="thumbnail">
-      <p>Van Gogh</p>
-      <img src="Kunst/Schilder/schilderVanGogh.png" alt="schilderVanGogh" style="width:100px;height:100px">
+    <a href="Kunst/Beeld/beeldMolin.png" class="thumbnail">
+      <p>Molin</p>
+      <img src="Kunst/Beeld/beeldMolin.png" alt="beeldMolin.png" style="width:100px;height:100px">
       <br>
     </a>
   </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/vanGogh1.png" class="thumbnail">
-      <p>vanGogh1</p>
-      <img src="Kunst/Schilder/vanGogh1.png" alt="vanGogh1" style="width:100px;height:100px">
+    <a href="Kunst/Beeld/molin1.png" class="thumbnail">
+      <p>molin1</p>
+      <img src="Kunst/Beeld/molin1.png" alt="molin1.png" style="width:100px;height:100px">
       <br>
     </a>
   </div>
 
-  <div class="pull-left"> <p class="navbar-text"> Tekst over Van Gogh.</p> </div>
+  <div class="pull-left"> <p class="navbar-text"> Tekst over Molin.</p> </div>
 
 <div class="col-md-2">
    </div>
@@ -89,16 +89,16 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderBrueghel.png" class="thumbnail">
+    <a href="Kunst/Beeld/beeldSawaya.png" class="thumbnail">
       <p>Brueghel</p>
-      <img src="Kunst/Schilder/schilderBrueghel.png" alt="schilderBrueghel" style="width:100px;height:100px">
+      <img src="Kunst/Beeld/beeldSawaya.png" alt="beeldSawaya" style="width:100px;height:100px">
       <br>
     </a>
   </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/brueghel1.png" class="thumbnail">
+    <a href="Kunst/Beeld/sawaya1.png" class="thumbnail">
       <p>brueghel1</p>
-      <img src="Kunst/Schilder/brueghel1.png" alt="brueghel1" style="width:100px;height:100px">
+      <img src="Kunst/Beeld/sawaya1.png" alt="sawaya1" style="width:100px;height:100px">
       <br>
     </a>
   </div>
