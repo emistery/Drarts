@@ -19,9 +19,7 @@ function artikelQuery($db){
 
 	$result = mysqli_query($db, $query);
 	$row = mysqli_fetch_array($result);
-//	while($row = mysqli_fetch_assoc($result)){
-	//	echo $row['ID'] . ' ' . $row['beschrijving'] . ' ' . $row['prijs'] . ' ' . $row['voorraad_aantal'] . ' ' . $row['aantal_exemplaren'] . ' ' . $row['voorraad_minimum_aantal']  . ' ' . $row['afbeelding'] .  "<br>";
-//}
+
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
 		$ID[$start] = $row['ID'];
@@ -46,23 +44,66 @@ function inkoopOrderQuery($db){
 
 	$result = mysqli_query($db, $query);
 	$row = mysqli_fetch_array($result);
-//	while($row = mysqli_fetch_assoc($result)){
-	//	echo $row['ID'] . ' ' . $row['beschrijving'] . ' ' . $row['prijs'] . ' ' . $row['voorraad_aantal'] . ' ' . $row['aantal_exemplaren'] . ' ' . $row['voorraad_minimum_aantal']  . ' ' . $row['afbeelding'] .  "<br>";
-//}
+
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
+		$ID[$start] = $row['ID'];
 		$aantal_besteld[$start] = $row['aantal_besteld'];
 		$aantal_geleverd[$start] = $row['aantal_geleverd'];
-		$besteldatum[$start] = $row['besteldatum'];
-		$ID[$start] = $row['ID'];
-		$Leverancier_gebruikersnaam[$start] = $row['Leverancier_gebruikersnaam'];
-		$leverdatum[$start] = $row['leverdatum'];
 		$totaalprijs[$start] = $row['totaalprijs'];
+		$besteldatum[$start] = $row['besteldatum'];
+		$leverdatum[$start] = $row['leverdatum'];
+		$Leverancier_gebruikersnaam[$start] = $row['Leverancier_gebruikersnaam'];
 		$start++;
 	}
-	$inkoopOrderData = array($aantal_besteld, $aantal_geleverd, $besteldatum, $ID, $Leverancier_gebruikersnaam, $leverdatum, $totaalprijs);
+	$inkoopOrderData = array($ID, $aantal_besteld, $aantal_geleverd, $totaalprijs, $besteldatum, $leverdatum, $Leverancier_gebruikersnaam);
 	return $inkoopOrderData;
 }
-echo inkoopOrderQuery($db)[0][2];
+//echo inkoopOrderQuery($db)[0][2];
 
+//function to query the ink_or_reg table
+function inkoopOrderRegelQuery($db){
+	$query = "SELECT * FROM ink_or_reg";
+	mysqli_query($db, $query) or die('Error querying database.');
+
+	$result = mysqli_query($db, $query);
+	$row = mysqli_fetch_array($result);
+
+	$start = 0;
+	while($row = mysqli_fetch_assoc($result)){
+		$aantal[$start] = $row['aantal'];
+		$prijs_artikel[$start] = $row['aantal_x_prijs_artikel'];
+		$Artikel_ID[$start] = $row['Artikel_ID'];
+		$Inkoop_order_ID[$start] = $row['Inkoop_order_ID'];
+		$aantal_x_prijs_artikel[$start] = $row['prijs_artikel'];
+		$start++;
+	}
+	$inkoopOrderRegelData = array($aantal, $prijs_artikel, $Artikel_ID, $Inkoop_order_ID, $aantal_x_prijs_artikel);
+	return $inkoopOrderRegelData;
+}
+
+//echo inkoopOrderRegelQuery($db)[0][2];
+
+//function to query the klant table
+function klantQuery($db){
+	$query = "SELECT * FROM klant";
+	mysqli_query($db, $query) or die('Error querying database.');
+
+	$result = mysqli_query($db, $query);
+	$row = mysqli_fetch_array($result);
+
+	$start = 0;
+	while($row = mysqli_fetch_assoc($result)){
+		$gebruikersnaam[$start] = $row['gebruikersnaam'];
+		$wachtwoord[$start] = $row['wachtwoord'];
+		$emailadres[$start] = $row['emailadres'];
+		$naam[$start] = $row['naam'];
+		$adres[$start] = $row['adres'];
+		$woonplaats[$start] = $row['woonplaats'];
+		$start++;
+	}
+	$klantData = array($gebruikersnaam, $wachtwoord, $emailadres, $naam, $adres, $woonplaats);
+	return $klantData;
+}
+echo klantQuery($db)[1][2];
 ?>
