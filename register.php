@@ -35,27 +35,53 @@
 
  			<?php
 
- 					echo "<tr><td>"."Inlognaam: "."</td>
+          //Behoud gebruikernaam bij fout
+          if(empty($_POST)){$gebruikernaam = "";}else{
+          $gebruikernaam = $_POST['gebruikernaam'];}
+
+          //Behoud naam bij fout
+          if(empty($_POST)){$naam = "";}else{
+          $naam = $_POST['naam'];}
+
+          //Behoud adres bij fout
+          if(empty($_POST)){$adres = "";}else{
+          $adres = $_POST['adres'];}
+
+          //Behoud E-mailadres bij fout
+          if(empty($_POST)){$emailadres = "";}else{
+          $emailadres = $_POST['emailadres'];}
+
+          //Behoud telefoonnummer bij fout
+          if(empty($_POST)){$telefoonnummer = "";}else{
+          $telefoonnummer = $_POST['telefoonnummer'];}
+
+          echo "<tr><td>"."Inlognaam: "."</td>
  						<td>"; //Inlognaam veld
- 						?><input type="text" name="gebruikernaam"></td><td>*</td></tr><?php
- 					echo "<tr><td>"."Wachtwoord: "."</td>
+ 						?><input type="text" name="gebruikernaam" value="<?php echo "$gebruikernaam"; ?>"></td><td>*</td></tr><?php
+ 					
+          echo "<tr><td>"."Wachtwoord: "."</td>
  						<td>"; //Wachtwoord veld
  						?><input type="password" name="wachtwoord"></td><td>*</td></tr><?php
- 					echo "<tr><td>"."Herhaal wachtwoord:"." "."</td></td>
+ 					
+          echo "<tr><td>"."Herhaal wachtwoord:"." "."</td></td>
  						<td>"; //Herhaal wachtwoord veld
  						?><input type="password" name="herhaal_wachtwoord"></td><td>*</td></tr><?php
- 					echo "<tr><td>"."Naam: <br/>"."</td></td>
+ 					
+          echo "<tr><td>"."Naam: <br/>"."</td></td>
  						<td>"; //Naam veld
- 						?><input type="text" name="naam"></td></tr><?php
- 					echo "<tr><td>"."Adres: "."</td></td>
+ 						?><input type="text" name="naam" value="<?php echo "$naam"; ?>"></td></tr><?php
+ 					
+          echo "<tr><td>"."Adres: "."</td></td>
  						<td>"; //Adres veld
- 						?><input type="text" name="adres"></td></tr><?php
- 					echo "<tr><td>"."E-mailadres: "."</td></td>
+ 						?><input type="text" name="adres" value="<?php echo "$adres"; ?>"></td></tr><?php
+ 				
+        	echo "<tr><td>"."E-mailadres: "."</td></td>
  						<td>"; //E-mail veld
- 						?><input type="text" name="emailadres"></td></tr><?php
- 					echo "<tr><td>"."Telefoonnummer: "."</td></td>
+ 						?><input type="text" name="emailadres" value="<?php echo "$emailadres"; ?>"></td></tr><?php
+ 					
+          echo "<tr><td>"."Telefoonnummer: "."</td></td>
  						<td>"; //Telefoonnummer veld
- 						?><input type="text" name="telefoonnummer"></td></tr>
+ 						?><input type="text" name="telefoonnummer" value="<?php echo "$telefoonnummer"; ?>"></td></tr>
 
         <tr><td>Kunstenaar</td><td><input type="checkbox" name="kunstenaar"></td></tr> <!-- Check veld -->
         
@@ -73,6 +99,7 @@
       <font size="3" color="red">
       <?php
 
+        //Checkt of velden zijn ingevoerd
         if(empty($_POST)){
           echo "<br/>Vul de velden in.";
           }else{
@@ -92,14 +119,14 @@
           
             if(empty($_POST)){}elseif
               ($_POST['wachtwoord'] === $_POST['herhaal_wachtwoord']){
-              echo "<br/>Wachtwoord klopt.";
+              echo "<br/>";
+              //connect to sql
             }else{
               $rePasswd = $_POST['wachtwoord'];
               echo "<br/>Wachtwoord klopt niet";
             }
           }
         }
-        
       ?>
       </font>
 
