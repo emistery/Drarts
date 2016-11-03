@@ -31,7 +31,7 @@
 
     	<!-- BODY-->
 
-    		<table><form action="register.php" method="post">
+    		<table><form action="register.php" method="post"><font size="3">
 
  			<?php
 
@@ -65,39 +65,43 @@
  				echo "</table>";
 
  				echo "<br/>Alle velden met * zijn verplicht!";
- 				?>
+ 				?></font>
 
  			<br/><input type="submit" name="submit" value="Account maken">
  			</form>
 
+      <font size="3" color="red">
       <?php
 
-        //Checkt invoer van gebruikernaam
-        if(empty($_POST['gebruikernaam'])){
-          echo "<br/>Vul een inlognaam in.";
-        }else{
-          $user = $_POST['gebruikernaam'];
-          echo "$user";
-        }
+        if(empty($_POST)){
+          echo "<br/>Vul de velden in.";
+          }else{
 
-        //Checkt invoer van wachtwoord
-        if(empty($_POST['wachtwoord'])){
-          echo "<br/>Vul een wachtwoord in.";
-        }else{
-          $passwd = $_POST['wachtwoord'];
-          echo "$passwd";
-        }
+          //Checkt invoer van gebruikernaam
+          if(empty($_POST['gebruikernaam'])){
+            echo "<br/>Vul een inlognaam in.";
+          }else{
+            $user = $_POST['gebruikernaam'];
+          }
 
-        //Checkt herhaal wachtwoord wachtwoord
-        if($_POST['wachtwoord'] === $_POST['herhaal_wachtwoord']){
-          echo "<br/>Wachtwoord klopt.";
-        }else{
-          $rePasswd = $_POST['wachtwoord'];
-          echo "<br/>Wachtwoord klopt niet";
+          //Checkt invoer van wachtwoord
+          if(empty($_POST['wachtwoord'])){
+            echo "<br/>Vul een wachtwoord in.";
+          }else{
+            $passwd = $_POST['wachtwoord'];
+          
+            if(empty($_POST)){}elseif
+              ($_POST['wachtwoord'] === $_POST['herhaal_wachtwoord']){
+              echo "<br/>Wachtwoord klopt.";
+            }else{
+              $rePasswd = $_POST['wachtwoord'];
+              echo "<br/>Wachtwoord klopt niet";
+            }
+          }
         }
-        echo "<br/>";
-        print_r($_POST);
+        
       ?>
+      </font>
 
 		<!-- /BODY-->
 
