@@ -34,8 +34,8 @@
       <!-- BODY-->
 
 <div class="btn-group-vertical" role="group" aria-label="Koopkunst">
-<button type="button" class="btn btn-default">Schilder</button>
-<button type="button" class="btn btn-default">Beeldend Kunstenaar</button>
+<a href="bestandsnaam.php" class="btn btn-default" role="button">Schilder Button</a>
+<a href="bestandsnaam.php" class="btn btn-default" role="button">Beeldend Kunstenaar Button</a>
 </div>
 
  <div class="row">
