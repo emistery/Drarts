@@ -13,6 +13,8 @@ if(mysqli_connect_errno()){
 
     );
 }
+include 'sql_connect.php'
+
 ?> 
   <div class="row">
     <div class="container-fluid">

@@ -1,17 +1,5 @@
 <?php
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "webdev";
 
-$db = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-if(mysqli_connect_errno()){
-	die("The connection is not successful: " .
-		mysqli_connect_error() . 
-			" (" . mysqli_connect_errno() . ")"
-		);
-}
 //function to query the artikel table
 function artikelQuery($db){
 	$query = "SELECT * FROM artikel";
@@ -34,7 +22,7 @@ function artikelQuery($db){
 	return $artikeldata;
 }
 // Example to query table
-echo artikelQuery($db)[0][0];
+//echo artikelQuery($db)[0][0];
 
 //function to query the inkoop_order table
 function inkoopOrderQuery($db){
