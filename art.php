@@ -17,6 +17,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+
   </head>
   <body>
   <!-- HEADER-->
@@ -30,9 +32,78 @@
       <!-- /NAVBAR-->
 
       <!-- BODY-->
- 
+
+<div class="btn-group-vertical" role="group" aria-label="Koopkunst">
+<button type="button" class="btn btn-default">Schilder</button>
+<button type="button" class="btn btn-default">Beeldend Kunstenaar</button>
+</div>
+
+ <div class="row">
+   <div class="col-md-1">
+   </div>
+  <div class="col-md-2">
+    <a href="Kunst/Schilder/schilderDali.png" class="thumbnail">
+      <p>Dali</p>
+      <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
+      <br>
+    </a>
+  </div>
+  <div class="col-md-2">
+    <a href="Kunst/Schilder/dali1.png" class="thumbnail">
+      <p>dali1</p>
+      <img src="Kunst/Schilder/dali1.png" alt="dali1" style="width:100px;height:100px">
+      <br>
+    </a>
+  </div>
+
+  <div class="pull-left"> <p class="navbar-text"> Tekst over Dali.</p> </div>
+
+  </div>
+
+   <div class="row">
+   <div class="col-md-1">
+   </div>
+  <div class="col-md-2">
+    <a href="Kunst/Schilder/schilderVanGogh.png" class="thumbnail">
+      <p>Van Gogh</p>
+      <img src="Kunst/Schilder/schilderVanGogh.png" alt="schilderVanGogh" style="width:100px;height:100px">
+      <br>
+    </a>
+  </div>
+  <div class="col-md-2">
+    <a href="Kunst/Schilder/vanGogh1.png" class="thumbnail">
+      <p>vanGogh1</p>
+      <img src="Kunst/Schilder/vanGogh1.png" alt="vanGogh1" style="width:100px;height:100px">
+      <br>
+    </a>
+  </div>
+
+  <div class="pull-left"> <p class="navbar-text"> Tekst over Van Gogh.</p> </div>
+
+<div class="col-md-2">
+   </div>
+  </div>
 
       <!-- /BODY-->
+   <div class="row">
+   <div class="col-md-1">
+   </div>
+  <div class="col-md-2">
+    <a href="Kunst/Schilder/schilderBrueghel.png" class="thumbnail">
+      <p>Brueghel</p>
+      <img src="Kunst/Schilder/schilderBrueghel.png" alt="schilderBrueghel" style="width:100px;height:100px">
+      <br>
+    </a>
+  </div>
+  <div class="col-md-2">
+    <a href="Kunst/Schilder/Brueghel1.png" class="thumbnail">
+      <p>brueghel1</p>
+      <img src="Kunst/Schilder/Brueghel1.png" alt="Brueghel1" style="width:100px;height:100px">
+      <br>
+    </a>
+  </div>
+
+  <div class="pull-left"> <p class="navbar-text"> Tekst over Brueghel.</p> </div>
 
       <!-- NAV -->
 
