@@ -39,6 +39,30 @@ function artikelQuery($db){
 // Example to query table
 // echo artikelQuery($db)[0][0];
 
+//function to query the inkoop_order table
+function inkoopOrderQuery($db){
+	$query = "SELECT * FROM inkoop_order";
+	mysqli_query($db, $query) or die('Error querying database.');
 
+	$result = mysqli_query($db, $query);
+	$row = mysqli_fetch_array($result);
+//	while($row = mysqli_fetch_assoc($result)){
+	//	echo $row['ID'] . ' ' . $row['beschrijving'] . ' ' . $row['prijs'] . ' ' . $row['voorraad_aantal'] . ' ' . $row['aantal_exemplaren'] . ' ' . $row['voorraad_minimum_aantal']  . ' ' . $row['afbeelding'] .  "<br>";
+//}
+	$start = 0;
+	while($row = mysqli_fetch_assoc($result)){
+		$aantal_besteld[$start] = $row['aantal_besteld'];
+		$aantal_geleverd[$start] = $row['aantal_geleverd'];
+		$besteldatum[$start] = $row['besteldatum'];
+		$ID[$start] = $row['ID'];
+		$Leverancier_gebruikersnaam[$start] = $row['Leverancier_gebruikersnaam'];
+		$leverdatum[$start] = $row['leverdatum'];
+		$totaalprijs[$start] = $row['totaalprijs'];
+		$start++;
+	}
+	$inkoopOrderData = array($aantal_besteld, $aantal_geleverd, $besteldatum, $ID, $Leverancier_gebruikersnaam, $leverdatum, $totaalprijs);
+	return $inkoopOrderData;
+}
+echo inkoopOrderQuery($db)[0][2];
 
 ?>
