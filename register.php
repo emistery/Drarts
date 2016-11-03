@@ -31,7 +31,7 @@
 
     	<!-- BODY-->
 
-    		<table><from action="register_pass.php">
+    		<table><from action="register_pass.php" method="get">
 
  			<?php
 
@@ -55,21 +55,28 @@
  						?><input type="text" name="emailadres"></td></tr><?php
  					echo "<tr><td>"."Telefoonnummer: "."</td></td>
  						<td>"; //Telefoonnummer veld
- 						?><input type="text" name="telefoonnummer"></td></tr><?
+ 						?><input type="text" name="telefoonnummer"></td></tr>
 
- 				
- 				
  				<?php
 
- 				echo "</form></table>";
+ 				echo "</table>";
 
  				echo "<br/>Alle velden met * zijn verplicht!";
+ 				?>
 
- 			?>
+ 			<br/><input type="submit" name="submit" value="Account maken">
+ 			</form>
 
- 			<br/><input type="submit" value="Account maken">
+ 			<!-- Test -->
+ 			<br/><br/><br/>
 
- 			
+ 			<?php
+		        if(empty($_POST)){
+		          echo "POST is empty";
+		        }else{
+		          print_r($_POST);
+		        }
+		    ?>
 
 		<!-- /BODY-->
 
