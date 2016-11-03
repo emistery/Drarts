@@ -19,7 +19,6 @@ function artikelQuery($db){
 
 	$result = mysqli_query($db, $query);
 	$row = mysqli_fetch_array($result);
-
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
 		$ID[$start] = $row['ID'];
@@ -35,7 +34,7 @@ function artikelQuery($db){
 	return $artikeldata;
 }
 // Example to query table
-// echo artikelQuery($db)[0][0];
+echo artikelQuery($db)[0][0];
 
 //function to query the inkoop_order table
 function inkoopOrderQuery($db){
@@ -105,5 +104,74 @@ function klantQuery($db){
 	$klantData = array($gebruikersnaam, $wachtwoord, $emailadres, $naam, $adres, $woonplaats);
 	return $klantData;
 }
-echo klantQuery($db)[1][2];
+//echo klantQuery($db)[1][2];
+
+//function to query the leverancier table
+function leverancierQuery($db){
+	$query = "SELECT * FROM leverancier";
+	mysqli_query($db, $query) or die('Error querying database.');
+
+	$result = mysqli_query($db, $query);
+	$row = mysqli_fetch_array($result);
+
+	$start = 0;
+	while($row = mysqli_fetch_assoc($result)){
+		$gebruikersnaam[$start] = $row['gebruikersnaam'];
+		$wachtwoord[$start] = $row['wachtwoord'];
+		$emailadres[$start] = $row['emailadres'];
+		$naam[$start] = $row['naam'];
+		$adres[$start] = $row['adres'];
+		$postcode[$start] = $row['postcode'];
+		$woonplaats[$start] = $row['woonplaats'];
+		$start++;
+	}
+	$leverancierData = array($gebruikersnaam, $wachtwoord, $emailadres, $naam, $adres, $postcode, $woonplaats);
+	return $leverancierData;
+}
+//echo leverancierQuery($db)[1][2];
+
+//function to query the verkoop_order table
+function verkoopOrderQuery($db){
+	$query = "SELECT * FROM verkoop_order";
+	mysqli_query($db, $query) or die('Error querying database.');
+
+	$result = mysqli_query($db, $query);
+	$row = mysqli_fetch_array($result);
+
+	$start = 0;
+	while($row = mysqli_fetch_assoc($result)){
+		$ID[$start] = $row['ID'];
+		$totaalprijs[$start] = $row['totaalprijs'];
+		$besteldatum[$start] = $row['besteldatum'];
+		$leverdatum[$start] = $row['leverdatum'];
+		$Klant_gebruikersnaam[$start] = $row['Klant_gebruikersnaam'];
+		$start++;
+	}
+	$inkoopOrderRegelData = array($ID, $totaalprijs, $besteldatum, $leverdatum, $Klant_gebruikersnaam);
+	return $inkoopOrderRegelData;
+}
+//echo verkoopOrderQuery($db)[1][2];
+
+//function to query the ver_or_reg table
+function verkoopOrderRegelQuery($db){
+	$query = "SELECT * FROM ver_or_reg";
+	mysqli_query($db, $query) or die('Error querying database.');
+
+	$result = mysqli_query($db, $query);
+	$row = mysqli_fetch_array($result);
+
+	$start = 0;
+	while($row = mysqli_fetch_assoc($result)){
+		$aantal[$start] = $row['aantal'];
+		$prijs_artikel[$start] = $row['prijs_artikel'];
+		$Verkoop_order_ID[$start] = $row['Verkoop_order_ID'];
+		$Artikel_ID[$start] = $row['Artikel_ID'];
+		$aantal_x_prijs_artikel[$start] = $row['aantal_x_prijs_artikel'];
+		$start++;
+	}
+	$verkoopOrderRegelData = array($aantal, $prijs_artikel, $Verkoop_order_ID, $Artikel_ID, $aantal_x_prijs_artikel);
+	return $verkoopOrderRegelData;
+}
+//echo verkoopOrderRegelQuery($db)[1][2];
+
 ?>
