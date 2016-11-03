@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
@@ -23,64 +24,22 @@
     <!-- /HEADER-->
 
 
-      <!-- NAVBAR-->
-<?php 
-include 'navbar.php';
- ?>
+    	<!-- NAVBAR-->
+<?php include 'navbar.php' ?>
 
-      <!-- /NAVBAR-->
+    	<!-- /NAVBAR-->
 
-      <!-- BODY-->
+    	<!-- BODY-->
+      <!-- Test -->
+      <?php
+        if(empty($_POST)){
+          echo "POST is empty";
+        }else{
+          print_r($_POST);
+        }
+      ?>
 
- <div class="row">
-   <div class="col-md-2">
-   </div>
-  <div class="col-md-4">
-    <a href="kunst1.jpg" class="thumbnail">
-      <p>Kunst 1</p>
-      <img src="kunst1.jpg" alt="kunst1" style="width:150px;height:150px">
-      <br>
-    </a>
-  </div>
-  <div class="col-md-4">
-    <a href="kunst2.jpg" class="thumbnail">
-      <p>Kunst2</p>
-      <img src="kunst2.jpg" alt="kunst2" style="width:150px;height:150px">
-      <br>
-    </a>
-  </div>
-
-
-<div class="col-md-2">
-   </div>
-  </div>
-
-   <div class="row">
-   <div class="col-md-2">
-   </div>
-  <div class="col-md-4">
-    <a href="kunst3.jpg" class="thumbnail">
-      <p>Kunst 3</p>
-      <img src="kunst3.jpg" alt="kunst3" style="width:150px;height:150px">
-      <br>
-    </a>
-  </div>
-  <div class="col-md-4">
-    <a href="kunst4.jpg" class="thumbnail">
-      <p>Kunst4</p>
-      <img src="kunst4.jpg" alt="kunst4" style="width:150px;height:150px">
-      <br>
-    </a>
-  </div>
-
-
-<div class="col-md-2">
-   </div>
-  </div>
-
-  
-
-      <!-- /BODY-->
+    	<!-- /BODY-->
 
       <!-- NAV -->
 
