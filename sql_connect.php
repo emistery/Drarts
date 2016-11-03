@@ -18,7 +18,7 @@ function artikelQuery($db){
 	mysqli_query($db, $query) or die('Error querying database.');
 
 	$result = mysqli_query($db, $query);
-	$row = mysqli_fetch_array($result);
+//	$row = mysqli_fetch_array($result);
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
 		$ID[$start] = $row['ID'];
@@ -42,7 +42,7 @@ function inkoopOrderQuery($db){
 	mysqli_query($db, $query) or die('Error querying database.');
 
 	$result = mysqli_query($db, $query);
-	$row = mysqli_fetch_array($result);
+//	$row = mysqli_fetch_array($result);
 
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
@@ -66,7 +66,7 @@ function inkoopOrderRegelQuery($db){
 	mysqli_query($db, $query) or die('Error querying database.');
 
 	$result = mysqli_query($db, $query);
-	$row = mysqli_fetch_array($result);
+//	$row = mysqli_fetch_array($result);
 
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
@@ -89,7 +89,7 @@ function klantQuery($db){
 	mysqli_query($db, $query) or die('Error querying database.');
 
 	$result = mysqli_query($db, $query);
-	$row = mysqli_fetch_array($result);
+//	$row = mysqli_fetch_array($result);
 
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
@@ -112,7 +112,7 @@ function leverancierQuery($db){
 	mysqli_query($db, $query) or die('Error querying database.');
 
 	$result = mysqli_query($db, $query);
-	$row = mysqli_fetch_array($result);
+//	$row = mysqli_fetch_array($result);
 
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
@@ -136,7 +136,7 @@ function verkoopOrderQuery($db){
 	mysqli_query($db, $query) or die('Error querying database.');
 
 	$result = mysqli_query($db, $query);
-	$row = mysqli_fetch_array($result);
+//	$row = mysqli_fetch_array($result);
 
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
@@ -158,7 +158,7 @@ function verkoopOrderRegelQuery($db){
 	mysqli_query($db, $query) or die('Error querying database.');
 
 	$result = mysqli_query($db, $query);
-	$row = mysqli_fetch_array($result);
+//	$row = mysqli_fetch_array($result);
 
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
