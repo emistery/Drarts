@@ -11,16 +11,8 @@ if(mysqli_connect_errno()){
     mysqli_connect_error() . 
       " (" . mysqli_connect_errno() . ")"
 
-
-
-
     );
 }
-
-
-
-
-
 ?> 
   <div class="row">
     <div class="container-fluid">
