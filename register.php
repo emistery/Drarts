@@ -31,7 +31,7 @@
 
     	<!-- BODY-->
 
-    		<table><from action="register_pass.php" method="get">
+    		<table><form action="register.php" method="post">
 
  			<?php
 
@@ -57,6 +57,9 @@
  						<td>"; //Telefoonnummer veld
  						?><input type="text" name="telefoonnummer"></td></tr>
 
+        <tr><td>Kunstenaar</td><td><input type="checkbox" name="kunstenaar"></td></tr> <!-- Check veld -->
+        
+
  				<?php
 
  				echo "</table>";
@@ -67,16 +70,34 @@
  			<br/><input type="submit" name="submit" value="Account maken">
  			</form>
 
- 			<!-- Test -->
- 			<br/><br/><br/>
+      <?php
 
- 			<?php
-		        if(empty($_POST)){
-		          echo "POST is empty";
-		        }else{
-		          print_r($_POST);
-		        }
-		    ?>
+        //Checkt invoer van gebruikernaam
+        if(empty($_POST['gebruikernaam'])){
+          echo "<br/>Vul een inlognaam in.";
+        }else{
+          $user = $_POST['gebruikernaam'];
+          echo "$user";
+        }
+
+        //Checkt invoer van wachtwoord
+        if(empty($_POST['wachtwoord'])){
+          echo "<br/>Vul een wachtwoord in.";
+        }else{
+          $passwd = $_POST['wachtwoord'];
+          echo "$passwd";
+        }
+
+        //Checkt herhaal wachtwoord wachtwoord
+        if($_POST['wachtwoord'] === $_POST['herhaal_wachtwoord']){
+          echo "<br/>Wachtwoord klopt.";
+        }else{
+          $rePasswd = $_POST['wachtwoord'];
+          echo "<br/>Wachtwoord klopt niet";
+        }
+        echo "<br/>";
+        print_r($_POST);
+      ?>
 
 		<!-- /BODY-->
 
