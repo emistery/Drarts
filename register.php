@@ -136,13 +136,23 @@
             if(empty($_POST)){}elseif
               ($_POST['wachtwoord'] === $_POST['herhaal_wachtwoord']){
               echo "<br/>";
-              //connect to sql
+              //Check kunstenaar
+
+                if(array_key_exists('kunstenaar', $_POST)){
+                  echo "Kunstenaar staat aan";
+                }else{
+
+                  echo "Kunstenaar staat uit";
+                }
+
+
             }else{
               $rePasswd = $_POST['wachtwoord'];
-              echo "<br/>Wachtwoord klopt niet";
+              echo "<br/>Herhaald wachtwoord komt niet overeen met het ingevoerde wachtwoord";
             }
           }
         }
+      
       ?>
       </font>
 
