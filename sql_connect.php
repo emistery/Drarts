@@ -245,5 +245,5 @@ function searchQuery($db, $search){
 	return $searchdata;
 }
 
-//echo searchQuery($db, "Print1")[1];
+//echo searchQuery($db, "Print1")[1][0];
 ?>
