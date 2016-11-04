@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Product</title>
+    <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,38 +30,11 @@
     	<!-- /NAVBAR-->
 
     	<!-- BODY-->
-    		<h1><center>Productnaam</center></h1>
-	<div class="row">
-		<div class="col-md-4">
-			HOI DIT IS DIV COL-MD-4 LEFT
-		</div>
+ 
 
-  		<div class="col-md-4">
-    		<a href="kunst2.jpg" class="thumbnail" img src="kunst2.jpg" alt="kunst2">
-    			<img src="kunst2.jpg" style="height:100%; width:100%">
-    		</a>
-    	</div>
+    	<!-- /BODY-->
 
-    	<div class="col-md-4" border="1px">
-    		HOI DIT IS DIV COL-MD-4 RIGHT
-    	</div>
-    </div>
-
-    <div class="row">
-    	<div class="col-md-3">
-    	</div>
-    	<div class="col-md-6">
-    		PRODUCTNAAM
-    		<div class="boxed">
-    			<?php include 'Loremipsum.php' ?>
-    		</div>
-    	</div>
-    </div>
-
-
-    <!-- /BODY-->
-
-    <!-- NAV -->
+      <!-- NAV -->
 
 <?php include 'footer.php' ?>
 </ul>

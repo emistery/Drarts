@@ -10,3 +10,6 @@
 width: 100%; /* use this, or not */
 margin: auto;
 }
+.boxed {
+  border: 1px solid #80bfff ;
+}

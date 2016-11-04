@@ -24,7 +24,7 @@
       </ul>
         
 
-      <form class="navbar-form navbar-right">
+      <form  class="navbar-form navbar-right">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Zoeken">
         </div>

@@ -35,21 +35,28 @@ include 'navbar.php';
  <div class="row">
    <div class="col-md-4">
    </div>
-  <div class="col-md-4">
+  <div class="col-md-4" >
     <a href="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" class="thumbnail">
       <p>  <?php echo artikelQuery($db)[1][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?> </p>
-      <img src="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" alt="kunst1" style="width:300px;height:300px">
+      <img src="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" alt="kunst1" style="width:100%;height:100%">
       <br>
     </a>
   </div>
   <div class="col-md-4">
+    
   </div>
   </div>
-  <div class="row">
+    <div class="row">
     <div class="col-md-4">
     </div>
     <div class="col-md-4">
-    
+    Bekijk nu dit werk van
+    <?php
+      $artist = artikelQuery($db)[7][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])];
+      echo artikelKunstenaarQuery($db, $artist);
+    ?>
+     voor een prijs van maarliefst &euro; <?php echo artikelQuery($db)[2][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
+    !
     </div>
 
   </div>
