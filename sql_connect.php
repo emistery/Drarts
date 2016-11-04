@@ -231,18 +231,19 @@ function searchQuery($db, $search){
 //	$row = mysqli_fetch_array($result);
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
-		$ID = $row['ID'];
-		$beschrijving = $row['beschrijving'];
-		$prijs = $row['prijs'];
-		$voorraad_aantal = $row['voorraad_aantal'];
-		$aantal_exemplaren = $row['aantal_exemplaren'];
-		$voorraad_minimum_aantal = $row['voorraad_minimum_aantal'];
-		$afbeelding = $row['afbeelding'];
-		$Kunstenaar_ID = $row['Kunstenaar_ID'];
+		$ID[$start] = $row['ID'];
+		$beschrijving[$start] = $row['beschrijving'];
+		$prijs[$start] = $row['prijs'];
+		$voorraad_aantal[$start] = $row['voorraad_aantal'];
+		$aantal_exemplaren[$start] = $row['aantal_exemplaren'];
+		$voorraad_minimum_aantal[$start] = $row['voorraad_minimum_aantal'];
+		$afbeelding[$start] = $row['afbeelding'];
+		$Kunstenaar_ID[$start] = $row['Kunstenaar_ID'];
+		$start++;
 	}
 	$searchdata = array($ID, $beschrijving, $prijs, $voorraad_aantal, $aantal_exemplaren, $voorraad_minimum_aantal, $afbeelding, $Kunstenaar_ID);
 	return $searchdata;
 }
 
-echo searchQuery($db, "Print1")[1];
+//echo searchQuery($db, "Print1")[1];
 ?>
