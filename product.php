@@ -30,10 +30,16 @@
     	<!-- /NAVBAR-->
 
     	<!-- BODY-->
-    		<h1><center>Productnaam</center></h1>
+    <div class="row">
+    	<div class="col-md-4">
+    	</div>
+    	<div class="col-md-4">
+    		<h1>Productnaam</h1>
+    	</div>
+    </div	>
 	<div class="row">
-		<div class="col-md-4">
-			HOI DIT IS DIV COL-MD-4 LEFT
+		<div class="col-md-3">
+				HOI DIT IS DIV COL-MD-2 LEFT
 		</div>
 
   		<div class="col-md-4">
@@ -41,9 +47,12 @@
     			<img src="kunst2.jpg" style="height:100%; width:100%">
     		</a>
     	</div>
-
-    	<div class="col-md-4" border="1px">
-    		HOI DIT IS DIV COL-MD-4 RIGHT
+    	<div class="col-md-1">
+    	</div>
+    	<div class="col-md-2">
+			<div class="boxed">
+    			HOI DIT IS DIV COL-MD-3 RIGHT
+    		</div>
     	</div>
     </div>
 
