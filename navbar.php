@@ -24,9 +24,9 @@
       </ul>
         
 
-      <form  class="navbar-form navbar-right">
+      <form action="search.php" method="GET" class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Zoeken">
+          <input type="text" class="form-control" name="search" placeholder="Zoeken">
         </div>
         <button type="submit" class="btn btn-default">Zoeken</button>
       </form>

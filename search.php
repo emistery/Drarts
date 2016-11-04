@@ -20,7 +20,7 @@
   </head>
   <body>
   <!-- HEADER-->
-    <?php include 'header.php' ?>
+    <?php include 'header.php'; ?>
     <!-- /HEADER-->
 
 
@@ -30,14 +30,28 @@
     	<!-- /NAVBAR-->
 
     	<!-- BODY-->
- 
+<div class="row">
+ <div class="col-md-4">
+ col1
+ </div>
+ <div class="col-md-4">
+<?php
 
+$search = $_GET['search'];
+foreach(searchQuery($db, "%" . $search . "%")[1] as $names){
+echo "<a href=kunst1.jpg class=thumbnail>" . "<img src=kunst1.jpg>" . "</a>";
+echo "<p>" . $names . "</p>";
+echo "<br>" . "<br>";
+}
+?>
+ </div>
+</div>
     	<!-- /BODY-->
 
       <!-- NAV -->
 
 <?php include 'footer.php' ?>
-</ul>
+
       <!-- /NAV -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
