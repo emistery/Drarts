@@ -42,7 +42,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Beeld/beeldJansen.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Jansen</p>
       <img src="Kunst/Beeld/beeldJansen.png" alt="beeldJansen" style="width:100px;height:100px">
       <br>
@@ -64,7 +64,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Beeld/beeldMolin.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Molin</p>
       <img src="Kunst/Beeld/beeldMolin.png" alt="beeldMolin.png" style="width:100px;height:100px">
       <br>
@@ -89,7 +89,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Beeld/beeldSawaya.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Brueghel</p>
       <img src="Kunst/Beeld/beeldSawaya.png" alt="beeldSawaya" style="width:100px;height:100px">
       <br>

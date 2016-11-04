@@ -42,9 +42,11 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderDali.png" class="thumbnail">
-      <p>Dali</p>
-      <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
+    <a href="art_inside.php" class="thumbnail">
+        <p>Dali</p>
+        <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
+    </a>
+     
       <br>
     </a>
   </div>
@@ -64,7 +66,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderVanGogh.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Van Gogh</p>
       <img src="Kunst/Schilder/schilderVanGogh.png" alt="schilderVanGogh" style="width:100px;height:100px">
       <br>
@@ -89,7 +91,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderBrueghel.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Brueghel</p>
       <img src="Kunst/Schilder/schilderBrueghel.png" alt="schilderBrueghel" style="width:100px;height:100px">
       <br>
