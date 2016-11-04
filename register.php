@@ -139,7 +139,7 @@
               //connect to sql
             }else{
               $rePasswd = $_POST['wachtwoord'];
-              echo "<br/>Wachtwoord klopt niet";
+              echo "<br/>Herhaald wachtwoord komt niet overeen met het ingevoerde wachtwoord";
             }
           }
         }
