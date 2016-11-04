@@ -33,6 +33,9 @@
     		<h1><center>Productnaam</center></h1>
 	<div class="row">
 		<div class="col-md-3">
+
+
+
 		</div>
   		<div class="col-md-6">
     		<div id="kunst" class="carousel slide" data-ride="carousel">
@@ -46,7 +49,6 @@
     				<div class="item active">
     					<img src="kunst2.jpg" alt="kunst2">
     				</div>
-    				</center>
     				<div class="item">
     					<img src="kunst3.jpg" alt="kunst3">
     				</div>
@@ -64,17 +66,9 @@
     	</div>
     </div>
 
-    		<!--<a href="kunst2.jpg" class="thumbnail">
-      		<p>Kunst2</p>
-      		<img src="kunst2.jpg" alt="kunst2" style="width:500px; height:500px">
-      		<br>
-    		</a>-->
-		</div>
-	</div>
+    <!-- /BODY-->
 
-    	<!-- /BODY-->
-
-      <!-- NAV -->
+    <!-- NAV -->
 
 <?php include 'footer.php' ?>
 </ul>
