@@ -18,7 +18,7 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <h1>Hello</h1>
           <nav class="navbar navbar-default">
 <nav class="navbar navbar-default">
   <div class="container-fluid">
