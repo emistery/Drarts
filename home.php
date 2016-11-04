@@ -33,23 +33,21 @@ include 'navbar.php';
       <!-- BODY-->
 <?php //echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
  <div class="row">
-   <div class="col-md-2">
+   <div class="col-md-4">
    </div>
   <div class="col-md-4">
-  Nu in de aannbieding!
     <a href="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" class="thumbnail">
-      <p> <?php echo artikelQuery($db)[1][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?></p>
-      <img src="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" alt="kunst1" style="width:150px;height:150px">
+      <p>  <?php echo artikelQuery($db)[1][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?> </p>
+      <img src="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" alt="kunst1" style="width:300px;height:300px">
       <br>
     </a>
   </div>
   <div class="col-md-4">
-    <a href="kunst2.jpg" class="thumbnail">
-      <p>Kunst2</p>
-      <img src="kunst2.jpg" alt="kunst2" style="width:150px;height:150px">
-      <br>
-    </a>
   </div>
+  </div>
+  <div class="row">
+    
+  
   </div>
 
 
