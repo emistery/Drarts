@@ -244,6 +244,9 @@ function searchQuery($db, $search){
 	$searchdata = array($ID, $beschrijving, $prijs, $voorraad_aantal, $aantal_exemplaren, $voorraad_minimum_aantal, $afbeelding, $Kunstenaar_ID);
 	return $searchdata;
 }
+$search = "Schilderij";
+// code to query a certain product based on search result ($search). first integer is column, 2nd is the number of the search result
+//print_r(searchQuery($db, "%" . "Schilderij" . "%")[1]);
+//echo searchQuery($db, "%" . $search . "%")[1][1];
 
-//echo searchQuery($db, "Print1")[1][0];
 ?>
