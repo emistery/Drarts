@@ -217,10 +217,32 @@ function artikelKunstenaarQuery($db, $artist){
 //	$row = mysqli_fetch_array($result);
 	while($row = mysqli_fetch_assoc($result)){
 		$naam = $row['naam'];
-		
 	}
 	$artikelKunstenaarData = $naam;
 	return $artikelKunstenaarData;
 }
 //echo artikelKunstenaarQuery($db, $artist);
+
+//function to query a search
+function searchQuery($db, $search){
+	$query = "SELECT * FROM artikel WHERE beschrijving like '$search' ";
+	mysqli_query($db, $query) or die('Error querying database.' . mysqli_error($db));
+	$result = mysqli_query($db, $query);
+//	$row = mysqli_fetch_array($result);
+	$start = 0;
+	while($row = mysqli_fetch_assoc($result)){
+		$ID = $row['ID'];
+		$beschrijving = $row['beschrijving'];
+		$prijs = $row['prijs'];
+		$voorraad_aantal = $row['voorraad_aantal'];
+		$aantal_exemplaren = $row['aantal_exemplaren'];
+		$voorraad_minimum_aantal = $row['voorraad_minimum_aantal'];
+		$afbeelding = $row['afbeelding'];
+		$Kunstenaar_ID = $row['Kunstenaar_ID'];
+	}
+	$searchdata = array($ID, $beschrijving, $prijs, $voorraad_aantal, $aantal_exemplaren, $voorraad_minimum_aantal, $afbeelding, $Kunstenaar_ID);
+	return $searchdata;
+}
+
+echo searchQuery($db, "Print1")[1];
 ?>
