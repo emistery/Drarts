@@ -47,6 +47,14 @@
           if(empty($_POST)){$adres = "";}else{
           $adres = $_POST['adres'];}
 
+          //Behoud postcode bij fout
+          if(empty($_POST)){$postcode = "";}else{
+          $postcode = $_POST['postcode'];}
+
+          //Behoud woonplaats bij fout
+          if(empty($_POST)){$woonplaats = "";}else{
+          $woonplaats = $_POST['woonplaats'];}
+
           //Behoud E-mailadres bij fout
           if(empty($_POST)){$emailadres = "";}else{
           $emailadres = $_POST['emailadres'];}
@@ -74,6 +82,14 @@
           echo "<tr><td>"."Adres: "."</td></td>
  						<td>"; //Adres veld
  						?><input type="text" name="adres" value="<?php echo "$adres"; ?>"></td></tr><?php
+
+          echo "<tr><td>"."Postcode: "."</td></td>
+            <td>"; //Postcode veld
+            ?><input type="text" name="postcode" value="<?php echo "$postcode"; ?>"></td></tr><?php
+
+          echo "<tr><td>"."Woonplaats: "."</td></td>
+            <td>"; //Woonplaats veld
+            ?><input type="text" name="woonplaats" value="<?php echo "$woonplaats"; ?>"></td></tr><?php
  				
         	echo "<tr><td>"."E-mailadres: "."</td></td>
  						<td>"; //E-mail veld
