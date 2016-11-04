@@ -19,7 +19,7 @@
   </head>
   <body>
   <!-- HEADER-->
-    <?php include 'header.php' ?>
+    <?php include 'header.php'; ?>
     <!-- /HEADER-->
 
 
@@ -77,9 +77,6 @@ include 'navbar.php';
 <div class="col-md-2">
    </div>
   </div>
-
-  
-
       <!-- /BODY-->
 
       <!-- NAV -->

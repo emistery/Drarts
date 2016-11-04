@@ -13,6 +13,8 @@ if(mysqli_connect_errno()){
 
     );
 }
+include 'sql_connect.php'
+
 ?> 
   <div class="row">
     <div class="container-fluid">
@@ -44,7 +46,7 @@ if(mysqli_connect_errno()){
                 </div>
 
                 <button type="submit" class="btn btn-primary">Login</button>
-                <button type="button" class="btn btn-primary">Registreer</button>
+                <a href=register.php class="btn btn-primary">Registreer</a>
            </form>
         </div>
       </div>
