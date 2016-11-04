@@ -32,39 +32,32 @@
     	<!-- BODY-->
     		<h1><center>Productnaam</center></h1>
 	<div class="row">
-		<div class="col-md-3">
-
-
-
+		<div class="col-md-4">
+			HOI DIT IS DIV COL-MD-4 LEFT
 		</div>
-  		<div class="col-md-6">
-    		<div id="kunst" class="carousel slide" data-ride="carousel">
-    			<ol class="carousel-indicators">
-    				<li data-target="#kunst" data-slide-to="0" class="active"></li>
-    				<li data-target="#kunst" data-slide-to="1"></li>
-    				<li data-target="#kunst" data-slide-to="2"></li>
-  				</ol>
-    			
-    			<div class="carousel-inner">
-    				<div class="item active">
-    					<img src="kunst2.jpg" alt="kunst2">
-    				</div>
-    				<div class="item">
-    					<img src="kunst3.jpg" alt="kunst3">
-    				</div>
-    				<div class="item">
-    					<img src="kunst4.jpg" alt="kunst4">
-    				</div>
-    			</div>
-    			<a class="left carousel-control" href="#kunst" data-slide="prev">
-    				<span class="glyphicon glyphicon-chevron-left"></span>
-    			</a>
-    			<a class="right carousel-control" href="#kunst" data-slide="next">
-    				<span class="glyphicon glyphicon-chevron-right"></span>
-    			</a>
+
+  		<div class="col-md-4">
+    		<a href="kunst2.jpg" class="thumbnail" img src="kunst2.jpg" alt="kunst2">
+    			<img src="kunst2.jpg" style="height:100%; width:100%">
+    		</a>
+    	</div>
+
+    	<div class="col-md-4" border="1px">
+    		HOI DIT IS DIV COL-MD-4 RIGHT
+    	</div>
+    </div>
+
+    <div class="row">
+    	<div class="col-md-3">
+    	</div>
+    	<div class="col-md-6">
+    		PRODUCTNAAM
+    		<div class="boxed">
+    			<?php include 'Loremipsum.php' ?>
     		</div>
     	</div>
     </div>
+
 
     <!-- /BODY-->
 
