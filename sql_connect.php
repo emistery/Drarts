@@ -209,5 +209,4 @@ function verkoopOrderRegelQuery($db){
 }
 //echo verkoopOrderRegelQuery($db)[1][2];
 
-
 ?>
