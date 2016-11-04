@@ -139,10 +139,14 @@
               //Check kunstenaar
 
                 if(array_key_exists('kunstenaar', $_POST)){
-                  echo "Kunstenaar staat aan";
-                }else{
+                  // Kunstenaar staat aan
+                  include 'function.php';
+                  echp(checkUsername($db, $_POST['gebruikernaam']));
 
-                  echo "Kunstenaar staat uit";
+                  mysqli_close($db);
+
+                }else{
+                  //Kunstenaar staat uit
                 }
 
 
