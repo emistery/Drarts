@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
@@ -19,52 +20,19 @@
   </head>
   <body>
   <!-- HEADER-->
-    <?php include 'header.php'; ?>
+    <?php include 'header.php' ?>
     <!-- /HEADER-->
 
 
-      <!-- NAVBAR-->
-<?php 
-include 'navbar.php';
- ?>
+    	<!-- NAVBAR-->
+<?php include 'navbar.php' ?>
 
-      <!-- /NAVBAR-->
+    	<!-- /NAVBAR-->
 
-      <!-- BODY-->
-<?php //echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
- <div class="row">
-   <div class="col-md-4">
-   </div>
-  <div class="col-md-4" >
-    <a href="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" class="thumbnail">
-      <p>  <?php echo artikelQuery($db)[1][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?> </p>
-      <img src="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" alt="kunst1" style="width:100%;height:100%">
-      <br>
-    </a>
-  </div>
-  <div class="col-md-4">
-    
-  </div>
-  </div>
-    <div class="row">
-    <div class="col-md-4">
-    </div>
-    <div class="col-md-4">
-    Bekijk nu dit werk van
-    <?php
-      $artist = artikelQuery($db)[7][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])];
-      echo artikelKunstenaarQuery($db, $artist);
-    ?>
-     voor een prijs van maarliefst &euro; <?php echo artikelQuery($db)[2][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
-    !
-    </div>
+    	<!-- BODY-->
+ 
 
-  </div>
-
-
-
-
-      <!-- /BODY-->
+    	<!-- /BODY-->
 
       <!-- NAV -->
 
