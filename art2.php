@@ -101,6 +101,8 @@
       <img src="Kunst/Beeld/sawaya1.png" alt="sawaya1" style="width:100px;height:100px">
       <br>
     </a>
+    <br>
+    <br>
   </div>
 
   <div class="pull-left"> <p class="navbar-text"> Tekst over Brueghel.</p> </div>

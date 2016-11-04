@@ -45,9 +45,9 @@
     <a href="art_inside.php" class="thumbnail">
         <p>Dali</p>
         <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
+        <br>
     </a>
      
-      <br>
     </a>
   </div>
   <div class="col-md-2">
@@ -103,6 +103,8 @@
       <img src="Kunst/Schilder/brueghel1.png" alt="brueghel1" style="width:100px;height:100px">
       <br>
     </a>
+      <br>
+      <br>
   </div>
 
   <div class="pull-left"> <p class="navbar-text"> Tekst over Brueghel.</p> </div>

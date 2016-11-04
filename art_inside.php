@@ -32,8 +32,25 @@ include 'navbar.php';
 
       <!-- BODY-->
 
+  <div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-2">
+     <p class="navbar-text"><center><h3>Salvador Dali</h3></center></p>
+     </div>
+     </div>
+
+  <div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-8">
+     <p class="navbar-text"><center>Dit is een hele hoop tekst over Salvador Dali. ifbdsuhfuidshfbsduibhvbsudihfdsivnbudsihfsuighsvbdjbueisdhfbuiesdbhfuihgukwhguiwlwruhvhilewbhewuidlhfuiwslhfuewilshfuwishfuisdhfvbuld sihgy8ikfesdfghfghfguihsidufhckdsghvy udkshbfgidskfyudskhgfudskhfukdsh fidskfhhruifhiojewfkbfyvuhkgyubkewj</center></p>
+     </div>
+   <div class="col-md-1"></div>
+     </div>
+
  <div class="row">
    <div class="col-md-1">
+   </div>
+   <div class="col-md-2">
    <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
    </div>
   <div class="col-md-4">
@@ -51,13 +68,12 @@ include 'navbar.php';
     </a>
   </div>
 
-
-<div class="col-md-2">
+<div class="col-md-4">
    </div>
   </div>
 
    <div class="row">
-   <div class="col-md-2">
+   <div class="col-md-3">
    </div>
   <div class="col-md-4">
     <a href="kunst3.jpg" class="thumbnail">
@@ -72,6 +88,8 @@ include 'navbar.php';
       <img src="kunst4.jpg" alt="kunst4" style="width:150px;height:150px">
       <br>
     </a>
+    <br>
+    <br>
   </div>
 
 
