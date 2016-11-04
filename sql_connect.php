@@ -1,5 +1,18 @@
 <?php
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "webdev";
 
+$db = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+
+if(mysqli_connect_errno()){
+  die("The connection is not successful: " .
+    mysqli_connect_error() . 
+      " (" . mysqli_connect_errno() . ")"
+
+    );
+}
 //function to query the artikel table
 function artikelQuery($db){
 	$query = "SELECT * FROM artikel";
@@ -16,13 +29,28 @@ function artikelQuery($db){
 		$aantal_exemplaren[$start] = $row['aantal_exemplaren'];
 		$voorraad_minimum_aantal[$start] = $row['voorraad_minimum_aantal'];
 		$afbeelding[$start] = $row['afbeelding'];
+		$Kunstenaar_ID[$start] = $row['Kunstenaar_ID'];
 		$start++;
 	}
-	$artikeldata = array($ID, $beschrijving, $prijs, $voorraad_aantal, $aantal_exemplaren, $voorraad_minimum_aantal, $afbeelding);
+	$artikeldata = array($ID, $beschrijving, $prijs, $voorraad_aantal, $aantal_exemplaren, $voorraad_minimum_aantal, $afbeelding, $Kunstenaar_ID);
 	return $artikeldata;
 }
 // Example to query table
 //echo artikelQuery($db)[0][0];
+
+//$key =  key(max(artikelQuery($db)[3]));
+//echo $key;
+//echo key(max(artikelQuery($db)));
+//$maxs = array_keys(artikelQuery($db)[3], max(artikelQuery($db)[3]));
+//echo $maxs;
+//print_r(artikelQuery($db)[3]);
+
+
+
+//$returnThis = array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3]);
+//command to query highest value in stock & combine a corresponding column given as the first integer
+//echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])];
+
 
 //function to query the inkoop_order table
 function inkoopOrderQuery($db){
@@ -86,13 +114,32 @@ function klantQuery($db){
 		$emailadres[$start] = $row['emailadres'];
 		$naam[$start] = $row['naam'];
 		$adres[$start] = $row['adres'];
+		$postcode[$start] = $row['postcode'];
 		$woonplaats[$start] = $row['woonplaats'];
 		$start++;
 	}
-	$klantData = array($gebruikersnaam, $wachtwoord, $emailadres, $naam, $adres, $woonplaats);
+	$klantData = array($gebruikersnaam, $wachtwoord, $emailadres, $naam, $adres, $postcode, $woonplaats);
 	return $klantData;
 }
 //echo klantQuery($db)[1][2];
+
+function kunstenaarQuery($db){
+	$query = "SELECT * FROM kunstenaar";
+	mysqli_query($db, $query) or die('Error querying database.');
+
+	$result = mysqli_query($db, $query);
+//	$row = mysqli_fetch_array($result);
+
+	$start = 0;
+	while($row = mysqli_fetch_assoc($result)){
+		$ID[$start] = $row['ID'];
+		$naam[$start] = $row['naam'];
+		$start++;
+	}
+	$kunstenaarData= array($ID, $naam);
+	return $kunstenaarData;
+}
+//echo kunstenaarQuery($db)[1][1];
 
 //function to query the leverancier table
 function leverancierQuery($db){
@@ -161,5 +208,6 @@ function verkoopOrderRegelQuery($db){
 	return $verkoopOrderRegelData;
 }
 //echo verkoopOrderRegelQuery($db)[1][2];
+
 
 ?>

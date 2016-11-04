@@ -36,9 +36,9 @@ include 'navbar.php';
    <div class="col-md-2">
    </div>
   <div class="col-md-4">
-    <a href="kunst1.jpg" class="thumbnail">
+    <a href="<?php echo artikelQuery($db)[6][0] ?>" class="thumbnail">
       <p>Kunst 1</p>
-      <img src="kunst1.jpg" alt="kunst1" style="width:150px;height:150px">
+      <img src="<?php echo artikelQuery($db)[6][0] ?>" alt="kunst1" style="width:150px;height:150px">
       <br>
     </a>
   </div>
@@ -77,6 +77,7 @@ include 'navbar.php';
 <div class="col-md-2">
    </div>
   </div>
+
       <!-- /BODY-->
 
       <!-- NAV -->
