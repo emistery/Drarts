@@ -30,9 +30,10 @@
     	<!-- /NAVBAR-->
 
     	<!-- BODY-->
-    <h1><center>Productnaam</center></h1>
-
+    		<h1><center>Productnaam</center></h1>
 	<div class="row">
+		<div class="col-md-3">
+		</div>
   		<div class="col-md-6">
     		<div id="kunst" class="carousel slide" data-ride="carousel">
     			<ol class="carousel-indicators">
@@ -43,13 +44,14 @@
     			
     			<div class="carousel-inner">
     				<div class="item active">
-    					<img src="kunst2.jpg" alt="kunst2" style="width:500px; height:500px">
+    					<img src="kunst2.jpg" alt="kunst2">
+    				</div>
+    				</center>
+    				<div class="item">
+    					<img src="kunst3.jpg" alt="kunst3">
     				</div>
     				<div class="item">
-    					<img src="kunst3.jpg" alt="kunst3" style="width:500px; height:500px">
-    				</div>
-    				<div class="item">
-    					<img src="kunst4.jpg" alt="kunst4" style="width:500px; height:500px">
+    					<img src="kunst4.jpg" alt="kunst4">
     				</div>
     			</div>
     			<a class="left carousel-control" href="#kunst" data-slide="prev">
