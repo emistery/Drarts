@@ -55,7 +55,7 @@ include 'navbar.php';
       $artist = artikelQuery($db)[7][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])];
       echo artikelKunstenaarQuery($db, $artist);
     ?>
-     voor een prijs van maarliefst &euro; <?php echo artikelQuery($db)[2][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
+     voor een prijs van maar liefst &euro;<?php echo artikelQuery($db)[2][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
     !
     </div>
 
