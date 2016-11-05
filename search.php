@@ -46,9 +46,10 @@ for ($i=0; $i < count(searchQuery($db, "%" . $search . "%")[0]); $i++) {
   $name = searchQuery($db, "%" . $search . "%")[1][$i];
   $prijs = searchQuery($db, "%" . $search . "%")[2][$i];
   $artist = artikelKunstenaarQuery($db, searchQuery($db, "%" . $search . "%")[7][$i]);
+  $id = searchQuery($db, "%" . $search . "%")[0][$i];
   echo $name . " " . "van" . " " . $artist . " " . "voor" . " " . "&euro;" .  $prijs;
   $image = searchQuery($db, "%" . $search . "%")[6][$i];
-  echo "<a href=" . $image . " " . "class=thumbnail>" . "<img src=" . $image . ">" . "</a>";
+  echo "<a href=product.php?name=" . $id . " " . "class=thumbnail>" . "<img src=" . $image . ">" . "</a>";
  // echo "<a href=" . searchQuery($db, "%" . $search . "%")[6][$i] . "class=thumbnail" . "<img src=kunst1.jpg>" . "</a>";
 }
 ?>
