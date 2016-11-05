@@ -229,7 +229,7 @@ function searchQuery($db, $search){
 	mysqli_query($db, $query) or die('Error querying database.' . mysqli_error($db));
 	$result = mysqli_query($db, $query);
 	if($result->num_rows == 0){
-		echo ("Geen resultaten gevonden");
+		return false;
 	} else{
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
@@ -247,7 +247,7 @@ function searchQuery($db, $search){
 	return $searchdata;
 }
 }
-$search = "Schilderij";
+//$search = "Schilderij";
 // code to query a certain product based on search result ($search). first integer is column, 2nd is the number of the search result
 //print_r(searchQuery($db, "%" . "Schilderij" . "%")[1]);
 //echo searchQuery($db, "%" . $search . "%")[1][1];

@@ -31,12 +31,16 @@
 
     	<!-- BODY-->
 <div class="row">
- <div class="col-md-4">
+ <div class="col-md-2">
+ </div>
+ <div class="col-md-2">
+  <?php   $search = $_GET['search'];      
+ $nresults = count(searchQuery($db, "%" . $search . "%")[0]); ?>
+ 
+ <?php echo $nresults; ?> resultaten gevonden!
  </div>
  <div class="col-md-4">
 <?php
-
-$search = $_GET['search'];
 //print_r(count(searchQuery($db, "%" . $search . "%")[0]));
 for ($i=0; $i < count(searchQuery($db, "%" . $search . "%")[0]); $i++) { 
   $name = searchQuery($db, "%" . $search . "%")[1][$i];
@@ -49,6 +53,12 @@ for ($i=0; $i < count(searchQuery($db, "%" . $search . "%")[0]); $i++) {
 }
 ?>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
  </div>
 </div>
     	<!-- /BODY-->
