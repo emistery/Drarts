@@ -69,7 +69,6 @@ include 'navbar.php';
       <!-- NAV -->
 
 <?php include 'footer.php' ?>
-</ul>
       <!-- /NAV -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
