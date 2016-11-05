@@ -32,18 +32,23 @@
     	<!-- BODY-->
 <div class="row">
  <div class="col-md-4">
- col1
  </div>
  <div class="col-md-4">
 <?php
 
 $search = $_GET['search'];
-foreach(searchQuery($db, "%" . $search . "%")[1] as $names){
-echo "<a href=kunst1.jpg class=thumbnail>" . "<img src=kunst1.jpg>" . "</a>";
-echo "<p>" . $names . "</p>";
-echo "<br>" . "<br>";
+//print_r(count(searchQuery($db, "%" . $search . "%")[0]));
+for ($i=0; $i < count(searchQuery($db, "%" . $search . "%")[0]); $i++) { 
+  $name = searchQuery($db, "%" . $search . "%")[1][$i];
+  $prijs = searchQuery($db, "%" . $search . "%")[2][$i];
+  $artist = artikelKunstenaarQuery($db, searchQuery($db, "%" . $search . "%")[7][$i]);
+  echo $name . " " . "van" . " " . $artist . " " . "voor" . " " . "&euro;" .  $prijs;
+  $image = searchQuery($db, "%" . $search . "%")[6][$i];
+  echo "<a href=" . $image . " " . "class=thumbnail>" . "<img src=" . $image . ">" . "</a>";
+ // echo "<a href=" . searchQuery($db, "%" . $search . "%")[6][$i] . "class=thumbnail" . "<img src=kunst1.jpg>" . "</a>";
 }
 ?>
+
  </div>
 </div>
     	<!-- /BODY-->
@@ -59,3 +64,14 @@ echo "<br>" . "<br>";
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+<?php
+//echo "<a href=kunst1.jpg class=thumbnail>" . "<img src=kunst1.jpg>" . "</a>";
+//echo "<p>" . $names . "</p>";
+//echo "<br>" . "<br>";
+
+
+
+//foreach(searchQuery($db, "%" . $search . "%")[6] as $image){
+//    echo "<a href=$image class=thumbnail>" . "<img src=$image>" . "</a>";
+//}
+?>

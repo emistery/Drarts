@@ -228,7 +228,9 @@ function searchQuery($db, $search){
 	$query = "SELECT * FROM artikel WHERE beschrijving like '$search' ";
 	mysqli_query($db, $query) or die('Error querying database.' . mysqli_error($db));
 	$result = mysqli_query($db, $query);
-//	$row = mysqli_fetch_array($result);
+	if($result->num_rows == 0){
+		echo ("Geen resultaten gevonden");
+	} else{
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
 		$ID[$start] = $row['ID'];
@@ -243,6 +245,7 @@ function searchQuery($db, $search){
 	}
 	$searchdata = array($ID, $beschrijving, $prijs, $voorraad_aantal, $aantal_exemplaren, $voorraad_minimum_aantal, $afbeelding, $Kunstenaar_ID);
 	return $searchdata;
+}
 }
 $search = "Schilderij";
 // code to query a certain product based on search result ($search). first integer is column, 2nd is the number of the search result
