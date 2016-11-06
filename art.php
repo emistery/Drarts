@@ -33,9 +33,12 @@
 
       <!-- BODY-->
 
-<div class="btn-group-vertical" role="group" aria-label="Koopkunst">
-<a href="art.php" class="btn btn-default" role="button">Schilder</a>
-<a href="art2.php" class="btn btn-default" role="button">Beeldend Kunstenaar</a>
+<div class="col-md-12">
+  <div class="btn-group-vertical" role="group" aria-label="Koopkunst">
+  <a href="art.php" class="btn btn-default" role="button">Schilder</a>
+  <a href="art2.php" class="btn btn-default" role="button">Beeldend Kunstenaar</a>
+  <br/>
+  </div>
 </div>
 
  <div class="row">
