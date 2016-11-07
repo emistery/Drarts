@@ -252,4 +252,12 @@ function searchQuery($db, $search){
 //print_r(searchQuery($db, "%" . "Schilderij" . "%")[1]);
 //echo searchQuery($db, "%" . $search . "%")[1][1];
 
+function accountQuery($db, $username){
+
+
+
+
+
+}
+
 ?>
