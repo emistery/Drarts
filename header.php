@@ -1,5 +1,5 @@
 <?php
-session_start();
+include_once 'sql_connect.php';
 
 $dbhost = "localhost";
 $dbuser = "root";
@@ -15,7 +15,7 @@ if(mysqli_connect_errno()){
 
     );
 }
-include 'sql_connect.php'
+
 
 ?> 
   <div class="row">
@@ -28,13 +28,15 @@ include 'sql_connect.php'
         </div>
       </div>
 <?php 
-      if ($_SESSION['authorized'] == FALSE) {
-        include_once 'loginform.php';
-        
-      }else{
-        
-        include_once 'loggedin.php';
-      }
+       if (isset($_SESSION['authorized'])) {
+       if ($_SESSION['authorized'] == 'TRUE') {
+         include_once 'loggedin.php';
+       }
+     }else{
+      include_once 'loginform.php';
+     }
+
+     
       
 ?>
     </div>
