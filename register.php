@@ -65,39 +65,39 @@
 
           echo "<tr><td>"."Inlognaam: "."</td>
  						<td>"; //Inlognaam veld
- 						?><input type="text" name="gebruikernaam" value="<?php echo "$gebruikernaam"; ?>"></td><td>*</td></tr><?php
+ 						?><input type="text" name="gebruikernaam" value="<?php echo "$gebruikernaam"; ?>" class="form-control"></td><td>*</td></tr><?php
  					
           echo "<tr><td>"."Wachtwoord: "."</td>
  						<td>"; //Wachtwoord veld
- 						?><input type="password" name="wachtwoord"></td><td>*</td></tr><?php
+ 						?><input type="password" name="wachtwoord" class="form-control"></td><td>*</td></tr><?php
  					
           echo "<tr><td>"."Herhaal wachtwoord:"." "."</td></td>
  						<td>"; //Herhaal wachtwoord veld
- 						?><input type="password" name="herhaal_wachtwoord"></td><td>*</td></tr><?php
+ 						?><input type="password" name="herhaal_wachtwoord" class="form-control"></td><td>*</td></tr><?php
  					
           echo "<tr><td>"."Naam: <br/>"."</td></td>
  						<td>"; //Naam veld
- 						?><input type="text" name="naam" value="<?php echo "$naam"; ?>"></td></tr><?php
+ 						?><input type="text" name="naam" value="<?php echo "$naam"; ?>" class="form-control"></td></tr><?php
  					
           echo "<tr><td>"."Adres: "."</td></td>
  						<td>"; //Adres veld
- 						?><input type="text" name="adres" value="<?php echo "$adres"; ?>"></td></tr><?php
+ 						?><input type="text" name="adres" value="<?php echo "$adres"; ?>" class="form-control"></td></tr><?php
 
           echo "<tr><td>"."Postcode: "."</td></td>
             <td>"; //Postcode veld
-            ?><input type="text" name="postcode" value="<?php echo "$postcode"; ?>"></td></tr><?php
+            ?><input type="text" name="postcode" value="<?php echo "$postcode"; ?>" class="form-control"></td></tr><?php
 
           echo "<tr><td>"."Woonplaats: "."</td></td>
             <td>"; //Woonplaats veld
-            ?><input type="text" name="woonplaats" value="<?php echo "$woonplaats"; ?>"></td></tr><?php
+            ?><input type="text" name="woonplaats" value="<?php echo "$woonplaats"; ?>" class="form-control"></td></tr><?php
  				
         	echo "<tr><td>"."E-mailadres: "."</td></td>
  						<td>"; //E-mail veld
- 						?><input type="text" name="emailadres" value="<?php echo "$emailadres"; ?>"></td></tr><?php
+ 						?><input type="text" name="emailadres" value="<?php echo "$emailadres"; ?>" class="form-control"></td></tr><?php
  					
           echo "<tr><td>"."Telefoonnummer: "."</td></td>
  						<td>"; //Telefoonnummer veld
- 						?><input type="text" name="telefoonnummer" value="<?php echo "$telefoonnummer"; ?>"></td></tr>
+ 						?><input type="text" name="telefoonnummer" value="<?php echo "$telefoonnummer"; ?>" class="form-control"></td></tr>
 
         <tr><td>Kunstenaar</td><td><input type="checkbox" name="kunstenaar"></td></tr> <!-- Check veld -->
         
@@ -109,7 +109,7 @@
  				echo "<br/>Alle velden met * zijn verplicht!";
  				?></font>
 
- 			<br/><input type="submit" name="submit" value="Account maken">
+ 			<br/><input type="submit" name="submit" value="Account maken" class="btn btn-primary">
  			</form>
 
       <font size="3" color="red">
@@ -159,6 +159,7 @@
       
       ?>
       </font>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 		<!-- /BODY-->
 
