@@ -30,7 +30,7 @@
       <!-- /NAVBAR-->
 
       <!-- BODY-->
-  <form class="form-horizontal" role="form" method="post" action="form.php">
+  <form class="form-horizontal" role="form" method="post" action="#form">
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">Naam</label>
     <div class="col-sm-10">

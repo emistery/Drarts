@@ -48,14 +48,11 @@
 </div>
 <?php
 //conectie database
-include 'sql_connect_test.php';
+//include 'sql_connect_test.php';
 
     $query = "SELECT * FROM artikel";
     mysqli_query($db, $query) or die('error querying datebase.');
 
-    if(isset($_POST['search'])){
-            $query .= "where beschrijving  LIKE \"%".$_POST['search']."%\"";
-          }
           
           $query .= " order by "; 
 
@@ -69,9 +66,9 @@ if(isset($_POST['ordenen'])){
     } else {
        $query = $query . "beschrijving asc"; 
     }
+} else { 
+       $query = $query . "beschrijving asc";
 }
- 
-
 
     $result = mysqli_query($db, $query) or die('error querying datebase.');
 
@@ -84,13 +81,14 @@ if(isset($_POST['ordenen'])){
     . "<div class='col-md-4'>"
          . "<a class='thumbnail' href='product.php'>"
              . "<p>" . $row['beschrijving']. "</p>"     
-             . "<img src=".$row['afbeelding'].".jpg style='width:300px;height:300px'>"
+             . "<img src=".$row['afbeelding']." style='width:300px;height:300px'>"
              . "<br>"
          . "</a>"
     . "</div>"
     . "<div class= 'col-md-4'>"
     . "</div>"
     . "</div>"  ; 
+
 print $gallerydiv;         
 }
 
