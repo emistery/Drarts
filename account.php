@@ -32,9 +32,38 @@
     	<!-- BODY-->
  <?php
 
-echo $_SESSION['username'];
+$username = $_SESSION['username'];
+//0 = username
+//1 = leverancier (true = 1)
+//2 = password
+//3 = email
+//4 = name
+//5 = address
+//6 = postal code
+//7 = city
 
  ?>
+ <div class="col-md-8">
+<ul class="list-group">
+  <li class="list-group-item">Uw gebruikersnaam = <?php echo accountQuery($db, $username)[0] ?></li>
+  <li class="list-group-item">Leverancier? </li>
+  <li class="list-group-item">Pas uw wachtwoord aan: 
+  <form action="update.php" method="POST">
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">@</span>
+  <input type="text" class="form-control" placeholder="Nieuw wachtwoord" name="newpassword" aria-describedby="basic-addon1">
+</div>
+<button type="submit"class="btn btn-primary">Versturen</button>
+</form>
+   </li>
+  <li class="list-group-item">Uw email = <?php echo accountQuery($db, $username)[3] ?></li>
+  <li class="list-group-item">Uw naam = <?php echo accountQuery($db, $username)[4] ?></li>
+  <li class="list-group-item">Uw adres = <?php echo accountQuery($db, $username)[5] ?></li>
+  <li class="list-group-item">Uw postcode = <?php echo accountQuery($db, $username)[6] ?></li>
+  <li class="list-group-item">Uw woonplaats = <?php echo accountQuery($db, $username)[7] ?></li>
+</ul>
+</div>
+
 
     	<!-- /BODY-->
 
