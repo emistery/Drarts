@@ -29,7 +29,73 @@
       <!-- /NAVBAR-->
 
       <!-- BODY-->
+<div class="row">
+<div class="col-md-1">
+ <form method="post">
+    <select name ="ordenen" onchange="this.form.submit()">
+    <option value="a-z" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "a-z"){print(" selected ");} ?>>a-z</option> 
+    <option value="z-a" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "z-a"){print(" selected ");} ?>>z-a</option>
+    <option value="g-d" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "g-d"){print(" selected ");} ?>>goedkoop-duur</option>  
+    <option value="d-g" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "d-g"){print(" selected ");} ?>>duur-goedkoop</option>
+      
+    </select>
+    
+        
+</form> 
+</div>
+<div class="col-md-11">
+</div>
+</div>
+<?php
+//conectie database
+include 'sql_connect_test.php';
+
+    $query = "SELECT * FROM artikel";
+    mysqli_query($db, $query) or die('error querying datebase.');
+
+    if(isset($_POST['search'])){
+            $query .= "where beschrijving  LIKE \"%".$_POST['search']."%\"";
+          }
+          
+          $query .= " order by "; 
+
+if(isset($_POST['ordenen'])){
+    if($_POST['ordenen'] == "z-a"){
+       $query = $query . "beschrijving desc";
+    } elseif ($_POST['ordenen'] == "g-d") {
+       $query = $query . "prijs asc"; 
+    } elseif ($_POST['ordenen'] == "d-g") {
+       $query = $query . "prijs desc"; 
+    } else {
+       $query = $query . "beschrijving asc"; 
+    }
+}
  
+
+
+    $result = mysqli_query($db, $query) or die('error querying datebase.');
+
+    $start = 0;
+    
+    while ($row = mysqli_fetch_assoc($result)){
+     $gallerydiv = "<div class= 'row'>"
+    . "<div class= 'col-md-4'>"
+    . "</div>"
+    . "<div class='col-md-4'>"
+         . "<a class='thumbnail' href='product.php'>"
+             . "<p>" . $row['beschrijving']. "</p>"     
+             . "<img src=".$row['afbeelding'].".jpg style='width:300px;height:300px'>"
+             . "<br>"
+         . "</a>"
+    . "</div>"
+    . "<div class= 'col-md-4'>"
+    . "</div>"
+    . "</div>"  ; 
+print $gallerydiv;         
+}
+
+
+?>
 
       <!-- /BODY-->
 
