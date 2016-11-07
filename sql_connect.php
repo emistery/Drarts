@@ -110,6 +110,7 @@ function klantQuery($db){
 	$start = 0;
 	while($row = mysqli_fetch_assoc($result)){
 		$gebruikersnaam[$start] = $row['gebruikersnaam'];
+		$leverancier[$start] = $row['leverancier'];
 		$wachtwoord[$start] = $row['wachtwoord'];
 		$emailadres[$start] = $row['emailadres'];
 		$naam[$start] = $row['naam'];
@@ -118,7 +119,7 @@ function klantQuery($db){
 		$woonplaats[$start] = $row['woonplaats'];
 		$start++;
 	}
-	$klantData = array($gebruikersnaam, $wachtwoord, $emailadres, $naam, $adres, $postcode, $woonplaats);
+	$klantData = array($gebruikersnaam, $leverancier, $wachtwoord, $emailadres, $naam, $adres, $postcode, $woonplaats);
 	return $klantData;
 }
 //echo klantQuery($db)[1][2];
@@ -134,14 +135,17 @@ function kunstenaarQuery($db){
 	while($row = mysqli_fetch_assoc($result)){
 		$ID[$start] = $row['ID'];
 		$naam[$start] = $row['naam'];
+		$afbeelding[$start] = $row['afbeelding'];
+		$soort[$start] = $row['soort'];
 		$start++;
 	}
-	$kunstenaarData= array($ID, $naam);
+	$kunstenaarData= array($ID, $naam, $afbeelding, $soort);
 	return $kunstenaarData;
 }
 //echo kunstenaarQuery($db)[1][1];
 
 //function to query the leverancier table
+//NIET MEER VAN TOEPASSING
 function leverancierQuery($db){
 	$query = "SELECT * FROM leverancier";
 	mysqli_query($db, $query) or die('Error querying database.');
