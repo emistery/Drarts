@@ -13,7 +13,7 @@ $result = mysqli_query($db, $query);
  
 	  		   //set session
 			   $_SESSION['authorized'] = 'TRUE';
- 
+ 				$_SESSION['username'] = $username;
 			   // reload the page
 			  $_SESSION['success'] = 'Login Successful';
 			  header('Location: ./home.php');
