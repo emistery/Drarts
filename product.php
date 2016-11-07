@@ -38,10 +38,13 @@
     	</div>
     </div	>
 	<div class="row">
-		<div class="col-md-3">
-				HOI DIT IS DIV COL-MD-2 LEFT
+		<div class="col-md-3"> &nbsp&nbsp
+			<div class="btn-group-vertical" role="group" aria-label="Koopkunst">
+				<a href="gallery.php" class="btn btn-default" role="button">Galerij</a>
+  				<a href="art.php" class="btn btn-default" role="button">Schilder</a>
+  				<a href="art2.php" class="btn btn-default" role="button">Beeldend Kunstenaar</a>
+			</div>
 		</div>
-
   		<div class="col-md-4">
     		<a href="kunst2.jpg" class="thumbnail" img src="kunst2.jpg" alt="kunst2">
     			<img src="kunst2.jpg" style="height:100%; width:100%">
@@ -49,13 +52,19 @@
     	</div>
     	<div class="col-md-1">
     	</div>
-    	<div class="col-md-2">
-			<div class="boxed">
-    			HOI DIT IS DIV COL-MD-3 RIGHT
+    	<div class="col-md-3">
+			<div> 
+			<!--Dit volgende stuk code is een beetje een rotzooi, omdat alles tussen <pre> tags staat.
+				Het was de snelste manier om een mooie border eromheen te krijgen.-->
+			
+				<pre>Prijs:		€artikelprijs		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><br>aantal: 	<input type="number" name="quantity" min="1" max="100" value="1"><br><br><br>Totaal:		€totaalprijs
+				<br><br><input type="button" name="addtocart" value="Voeg toe aan winkewagentje"><br><br><br><input type="button" name="tocart" value="Naar winkelwagentje">
+    			</pre>
     		</div>
     	</div>
     </div>
-
+    <br>
+    <br>
     <div class="row">
     	<div class="col-md-3">
     	</div>
@@ -66,8 +75,9 @@
     		</div>
     	</div>
     </div>
-
-
+    <br>
+    <br>
+    <br>
     <!-- /BODY-->
 
     <!-- NAV -->
