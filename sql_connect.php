@@ -291,9 +291,10 @@ function accountQuery($db, $username){
 function updatePass($username, $db, $newpassword){
 	$query =  "UPDATE klant SET wachtwoord = '$newpassword' WHERE gebruikersnaam = '$username'";
 	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
-	
+}
 
-
-
+function updateAccount($username, $db, $column, $data){
+	$query = "UPDATE klant SET '$column' = '$data' WHERE gebruikersnaam = '$username'";
+	mysqli_query($db, $query) or die ('Error querying database.'  . mysqli_error($db));
 }
 ?>

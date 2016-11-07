@@ -51,7 +51,7 @@ $username = $_SESSION['username'];
   <form action="update.php" method="POST">
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Nieuw wachtwoord" name="newpassword" aria-describedby="basic-addon1">
+  <input type="password" class="form-control" placeholder="Nieuw wachtwoord" name="newpassword" aria-describedby="basic-addon1">
 </div>
 <button type="submit"class="btn btn-primary">Versturen</button>
 </form>
