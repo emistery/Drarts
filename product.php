@@ -53,9 +53,12 @@
     	<div class="col-md-1">
     	</div>
     	<div class="col-md-3">
-			<div>
-				<pre>Prijs:		€artikelprijs &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><br>aantal: 	<input type="number" name="quantity" min="1" max="100" value="1"><br><br><br>Totaal:		€totaalprijs
-				<br><br><input type="button" name="addtocart" value="voeg toe aan winkewagentje"><br><br><br><input type="button" name="tocart" value="Naar winkelwagentje">
+			<div> 
+			<!--Dit volgende stuk code is een beetje een rotzooi, omdat alles tussen <pre> tags staat.
+				Het was de snelste manier om een mooie border eromheen te krijgen.-->
+			
+				<pre>Prijs:		€artikelprijs		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><br>aantal: 	<input type="number" name="quantity" min="1" max="100" value="1"><br><br><br>Totaal:		€totaalprijs
+				<br><br><input type="button" name="addtocart" value="Voeg toe aan winkewagentje"><br><br><br><input type="button" name="tocart" value="Naar winkelwagentje">
     			</pre>
     		</div>
     	</div>
