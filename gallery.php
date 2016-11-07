@@ -31,8 +31,6 @@
       <!-- BODY-->
 <div class="row">
 <div class="col-md-1">
-</div>
-<div class="col-md-1">
  <form method="post">
     <select name ="ordenen" onchange="this.form.submit()">
     <option value="a-z" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "a-z"){print(" selected ");} ?>>a-z</option> 
@@ -45,7 +43,7 @@
         
 </form> 
 </div>
-<div class="col-md-10">
+<div class="col-md-11">
 </div>
 </div>
 <?php
