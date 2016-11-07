@@ -50,7 +50,7 @@
 //functie
 
 
-    $query = "SELECT a.ID, beschrijving, prijs, afbeelding, naam FROM artikel a JOIN kunstenaar k ON a.Kunstenaar_ID = k.ID ";
+    $query = "SELECT a.ID, beschrijving, prijs, a.afbeelding, naam FROM artikel a JOIN kunstenaar k ON a.Kunstenaar_ID = k.ID ";
     mysqli_query($db, $query) or die('error querying datebase.');
 
           
