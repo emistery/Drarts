@@ -48,7 +48,7 @@
 </div>
 <?php
 //conectie database
-include 'sql_connect_test.php';
+
 
     $query = "SELECT * FROM artikel";
     mysqli_query($db, $query) or die('error querying datebase.');
@@ -83,15 +83,17 @@ if(isset($_POST['ordenen'])){
     . "</div>"
     . "<div class='col-md-4'>"
          . "<a class='thumbnail' href='product.php'>"
+
              . "<p>" . $row['beschrijving']. "</p>"     
-             . "<img src=".$row['afbeelding'].".jpg style='width:300px;height:300px'>"
+             . "<img src=".$row['afbeelding']." style='width:300px;height:300px'>"
              . "<br>"
          . "</a>"
     . "</div>"
     . "<div class= 'col-md-4'>"
     . "</div>"
     . "</div>"  ; 
-print $gallerydiv;         
+print $gallerydiv;   
+
 }
 
 
