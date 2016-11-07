@@ -19,7 +19,7 @@
   </head>
   <body>
   <!-- HEADER-->
-    <?php include 'header.php'; ?>
+    <?php include 'header.php' ?>
     <!-- /HEADER-->
 
 
@@ -31,58 +31,44 @@ include 'navbar.php';
       <!-- /NAVBAR-->
 
       <!-- BODY-->
-
+<?php //echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
  <div class="row">
-   <div class="col-md-2">
+   <div class="col-md-4">
    </div>
-  <div class="col-md-4">
-    <a href="kunst1.jpg" class="thumbnail">
-      <p>Kunst 1</p>
-      <img src="kunst1.jpg" alt="kunst1" style="width:150px;height:150px">
+  <div class="col-md-4" >
+    <a href="product.php?name=<?php echo artikelQuery($db)[0][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>" class="thumbnail">
+      <p>  <?php echo artikelQuery($db)[1][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?> </p>
+      <img src="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" alt="kunst1" style="width:100%;height:100%">
       <br>
     </a>
   </div>
   <div class="col-md-4">
-    <a href="kunst2.jpg" class="thumbnail">
-      <p>Kunst2</p>
-      <img src="kunst2.jpg" alt="kunst2" style="width:150px;height:150px">
-      <br>
-    </a>
+  
+  </div>
+  </div>
+    <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+    Bekijk nu dit werk van
+    <?php
+      $artist = artikelQuery($db)[7][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])];
+      echo artikelKunstenaarQuery($db, $artist);
+    ?>
+     voor een prijs van maar liefst &euro;<?php echo artikelQuery($db)[2][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
+    !
+    </div>
+
   </div>
 
 
-<div class="col-md-2">
-   </div>
-  </div>
-
-   <div class="row">
-   <div class="col-md-2">
-   </div>
-  <div class="col-md-4">
-    <a href="kunst3.jpg" class="thumbnail">
-      <p>Kunst 3</p>
-      <img src="kunst3.jpg" alt="kunst3" style="width:150px;height:150px">
-      <br>
-    </a>
-  </div>
-  <div class="col-md-4">
-    <a href="kunst4.jpg" class="thumbnail">
-      <p>Kunst4</p>
-      <img src="kunst4.jpg" alt="kunst4" style="width:150px;height:150px">
-      <br>
-    </a>
-  </div>
 
 
-<div class="col-md-2">
-   </div>
-  </div>
       <!-- /BODY-->
 
       <!-- NAV -->
 
 <?php include 'footer.php' ?>
-</ul>
       <!-- /NAV -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

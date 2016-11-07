@@ -33,16 +33,19 @@
 
       <!-- BODY-->
 
-<div class="btn-group-vertical" role="group" aria-label="Koopkunst">
-<a href="art.php" class="btn btn-default" role="button">Schilder</a>
-<a href="art2.php" class="btn btn-default" role="button">Beeldend Kunstenaar</a>
+<div class="col-md-12">
+  <div class="btn-group-vertical" role="group" aria-label="Koopkunst">
+  <a href="art.php" class="btn btn-default" role="button">Schilder</a>
+  <a href="art2.php" class="btn btn-default" role="button">Beeldend Kunstenaar</a>
+  <br/>
+  </div>
 </div>
 
  <div class="row">
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Beeld/beeldJansen.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Jansen</p>
       <img src="Kunst/Beeld/beeldJansen.png" alt="beeldJansen" style="width:100px;height:100px">
       <br>
@@ -64,7 +67,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Beeld/beeldMolin.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Molin</p>
       <img src="Kunst/Beeld/beeldMolin.png" alt="beeldMolin.png" style="width:100px;height:100px">
       <br>
@@ -89,7 +92,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Beeld/beeldSawaya.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Brueghel</p>
       <img src="Kunst/Beeld/beeldSawaya.png" alt="beeldSawaya" style="width:100px;height:100px">
       <br>
@@ -101,6 +104,8 @@
       <img src="Kunst/Beeld/sawaya1.png" alt="sawaya1" style="width:100px;height:100px">
       <br>
     </a>
+    <br>
+    <br>
   </div>
 
   <div class="pull-left"> <p class="navbar-text"> Tekst over Brueghel.</p> </div>

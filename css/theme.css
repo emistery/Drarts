@@ -4,3 +4,12 @@
 .ftr-background{
 	background-color: white;
 }
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img{
+width: 100%; /* use this, or not */
+margin: auto;
+}
+.boxed {
+  border: 1px solid #80bfff ;
+}

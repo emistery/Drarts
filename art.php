@@ -33,19 +33,24 @@
 
       <!-- BODY-->
 
-<div class="btn-group-vertical" role="group" aria-label="Koopkunst">
-<a href="art.php" class="btn btn-default" role="button">Schilder</a>
-<a href="art2.php" class="btn btn-default" role="button">Beeldend Kunstenaar</a>
+<div class="col-md-12">
+  <div class="btn-group-vertical" role="group" aria-label="Koopkunst">
+  <a href="art.php" class="btn btn-default" role="button">Schilder</a>
+  <a href="art2.php" class="btn btn-default" role="button">Beeldend Kunstenaar</a>
+  <br/>
+  </div>
 </div>
 
  <div class="row">
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderDali.png" class="thumbnail">
-      <p>Dali</p>
-      <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
-      <br>
+    <a href="art_inside.php" class="thumbnail">
+        <p>Dali</p>
+        <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
+        <br>
+    </a>
+     
     </a>
   </div>
   <div class="col-md-2">
@@ -64,7 +69,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderVanGogh.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Van Gogh</p>
       <img src="Kunst/Schilder/schilderVanGogh.png" alt="schilderVanGogh" style="width:100px;height:100px">
       <br>
@@ -89,7 +94,7 @@
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
-    <a href="Kunst/Schilder/schilderBrueghel.png" class="thumbnail">
+    <a href="art_inside.php" class="thumbnail">
       <p>Brueghel</p>
       <img src="Kunst/Schilder/schilderBrueghel.png" alt="schilderBrueghel" style="width:100px;height:100px">
       <br>
@@ -101,6 +106,8 @@
       <img src="Kunst/Schilder/brueghel1.png" alt="brueghel1" style="width:100px;height:100px">
       <br>
     </a>
+      <br>
+      <br>
   </div>
 
   <div class="pull-left"> <p class="navbar-text"> Tekst over Brueghel.</p> </div>

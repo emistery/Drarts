@@ -2,8 +2,9 @@
   $parts = explode("/", $_SERVER["PHP_SELF"]);
   $file = $parts[2];
 ?>
+<div class="container-fluid">
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -24,15 +25,16 @@
       </ul>
         
 
-      <form class="navbar-form navbar-right">
+      <form action="search.php" method="GET" class="navbar-form navbar-right">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Zoeken">
+          <input type="text" class="form-control" name="search" placeholder="Zoeken">
         </div>
         <button type="submit" class="btn btn-default">Zoeken</button>
       </form>
 
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  
 
   
 </nav>
+</div><!-- /.container-fluid -->
