@@ -47,10 +47,10 @@
 </div>
 </div>
 <?php
-//conectie database
-//include 'sql_connect_test.php';
+//functie
 
-    $query = "SELECT * FROM artikel";
+
+    $query = "SELECT a.ID, beschrijving, prijs, afbeelding, naam FROM artikel a JOIN kunstenaar k ON a.Kunstenaar_ID = k.ID ";
     mysqli_query($db, $query) or die('error querying datebase.');
 
           
@@ -79,8 +79,9 @@ if(isset($_POST['ordenen'])){
     . "<div class= 'col-md-4'>"
     . "</div>"
     . "<div class='col-md-4'>"
-         . "<a class='thumbnail' href='product.php'>"
-             . "<p>" . $row['beschrijving']. "</p>"     
+         . "<a class='thumbnail' href=product.php?name=" . $row['ID'] . " >"
+             . "<p>" . $row['beschrijving']. " van ". $row['naam'] ."</p>"
+             . "<p>". "Prijs: ". $row['prijs'] . "</p>"   
              . "<img src=".$row['afbeelding']." style='width:300px;height:300px'>"
              . "<br>"
          . "</a>"
@@ -94,6 +95,7 @@ print $gallerydiv;
 
 
 ?>
+
 
       <!-- /BODY-->
 
