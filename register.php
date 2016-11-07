@@ -99,7 +99,7 @@
  						<td>"; //Telefoonnummer veld
  						?><input type="text" name="telefoonnummer" value="<?php echo "$telefoonnummer"; ?>" class="form-control"></td></tr>
 
-        <tr><td>Kunstenaar</td><td><input type="checkbox" name="kunstenaar"></td></tr> <!-- Check veld -->
+        <tr><td>Leverancier</td><td><input type="checkbox" name="leverancier"></td></tr> <!-- Check veld -->
         
 
  				<?php
@@ -140,8 +140,8 @@
 
                 if(array_key_exists('kunstenaar', $_POST)){
                   // Kunstenaar staat aan
-                  include 'function.php';
-                  echp(checkUsername($db, $_POST['gebruikernaam']));
+                  include 'functions.php';
+                  echo (checkUsername($db, $_POST['gebruikernaam']));
 
                   mysqli_close($db);
 
