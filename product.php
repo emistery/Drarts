@@ -58,7 +58,8 @@
 
 				<pre>
 					<form action="/Drarts/shopping_cart.php" method="post">Prijs:		€<?php
-					$ID = $_GET['name']; echo productPage($db, $ID)[2]; ?>		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><?php include 'price_total.php' ?><input type="submit" name="tocart" value="Naar winkelwagentje">
+					$ID = $_GET['name']; echo productPage($db, $ID)[2]; ?>		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><?php include 'price_total.php' ?><input type="submit" value="In winkelwagentje">
+					<input type="hidden" name="ID" <?php echo "value=" . $_GET['name'] ?> >
     				</form>
     			</pre>
     		</div>

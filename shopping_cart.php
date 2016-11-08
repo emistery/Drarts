@@ -46,7 +46,7 @@
       <th>Afbeelding</th>
       <th>
       <?php 
-        echo $_POST['winkelwagen'][0]  Product
+        echo $_POST['winkelwagen'][0];  #Product
         foreach ($_POST['winkelwagen'] as $value) {
           # code...
         }
