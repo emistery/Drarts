@@ -138,15 +138,15 @@
               echo "<br/>";
               //Check kunstenaar
 
-                if(array_key_exists('kunstenaar', $_POST)){
-                  // Kunstenaar staat aan
+                if(array_key_exists('leverancier', $_POST)){
+                  // Leverancier staat aan
                   include 'functions.php';
-                  echo (checkUsername($db, $_POST['gebruikernaam']));
+                  (checkUsername($db, $_POST['gebruikernaam'], $_POST['wachtwoord'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats'], $_POST['emailadres'], $_POST['telefoonnummer'], $_POST['leverancier']=1));
 
                   mysqli_close($db);
 
                 }else{
-                  //Kunstenaar staat uit
+                  //Leverancier staat uit
                 }
 
 

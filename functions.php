@@ -1,10 +1,8 @@
 <?php
-function checkUsername($db, $gebruikersnaam){
-	$query = "SELECT gebruikersnaam
-			  FROM Klant
-			  WHERE gebruikersnaam = $gebruikersnaam";
-	mysqli_query($db, $query) or die('Inlognaam bestaat al');
+function checkUsername($db, $gebruikersnaam, $wachtwoord, $naam, $adres, $postcode, $woonplaats, $emailadres, $telefoonnummer, $leverancier){
+	$query = 	"INSERT INTO Klant
+				VALUES ('$gebruikersnaam', '$wachtwoord', '$naam', '$adres', '$postcode', '$woonplaats', '$emailadres', '$telefoonnummer', '$leverancier')";
 
-	$result = mysqli_query($db, $query);
+	mysqli_query($db, $query) or die('Inlognaam bestaat al');}
 	
 ?>
