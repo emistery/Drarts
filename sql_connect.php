@@ -328,4 +328,9 @@ function checkUsername($db, $gebruikersnaam, $wachtwoord, $naam, $adres, $postco
 
 //productPage($db, $ID)[0]
 //SELECT product where $ID is the id number and the integer is the selected column
+
+function newProduct($db, $pID, $pName, $pPrice, $pImage, $pArtist){
+	$query = "INSERT INTO artikel (ID, beschrijving, prijs, afbeelding, Kunstenaar_ID) VALUES ($pID, '$pName', '$pPrice', '$pImage', $pArtist)";
+	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
+}
 ?>
