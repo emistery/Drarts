@@ -45,8 +45,6 @@
       <tr>
       <th>Afbeelding</th>
       <th>
-
-
       </th>
       <th>Aantal</th>
       <th>Prijs</th>
@@ -57,18 +55,8 @@
       <td>1</td>
       <td>€15,-</td>
       </tr>
-      <tr>
-      <td><a href="Kunst/Schilder/vanGogh1.png"><img src="Kunst/Schilder/vanGogh1.png" class="thumbnail" alt="vanGogh1" style="width:50px;height:50px"></td>
-      <td>De Sterrennacht <br/> (poster)</td>
-      <td>1</td>
-      <td>€15,-</td>
-      </tr>
-      <tr>
-      <td><a href="Kunst/Schilder/brueghel1.png"><img src="Kunst/Schilder/brueghel1.png" class="thumbnail" alt="brueghel1" style="width:50px;height:50px"></td>
-      <td>Dulle Griet <br/> (poster)</td>
-      <td>1</td>
-      <td>€15,-</td>
-      </tr>
+
+   
     </table>
     <div class="panel-footer pull-right">Totaal: €15,-</div>
     </div>
