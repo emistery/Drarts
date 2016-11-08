@@ -301,6 +301,7 @@ function updateAccount($username, $db, $column, $data){
 function productPage($db, $ID){
 	$query = "SELECT * FROM artikel where ID = $ID";
 	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
+	$result = mysqli_query($db, $query);
 	if($result->num_rows == 0){
 		return false;
 	} else{
@@ -318,6 +319,7 @@ function productPage($db, $ID){
 	return $productData;
 }
 }
+
 //productPage($db, $ID)[0]
 //SELECT product where $ID is the id number and the integer is the selected column
 ?>
