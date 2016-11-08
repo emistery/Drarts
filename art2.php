@@ -93,14 +93,14 @@
    </div>
   <div class="col-md-2">
     <a href="art_inside.php" class="thumbnail">
-      <p>Brueghel</p>
+      <p>Sawaya</p>
       <img src="Kunst/Beeld/beeldSawaya.png" alt="beeldSawaya" style="width:100px;height:100px">
       <br>
     </a>
   </div>
   <div class="col-md-2">
     <a href="Kunst/Beeld/sawaya1.png" class="thumbnail">
-      <p>brueghel1</p>
+      <p>sawaya1</p>
       <img src="Kunst/Beeld/sawaya1.png" alt="sawaya1" style="width:100px;height:100px">
       <br>
     </a>
@@ -108,7 +108,7 @@
     <br>
   </div>
 
-  <div class="pull-left"> <p class="navbar-text"> Tekst over Brueghel.</p> </div>
+  <div class="pull-left"> <p class="navbar-text"> Tekst over Sawaya.</p> </div>
 
       <!-- NAV -->
 
