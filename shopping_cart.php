@@ -46,14 +46,10 @@
       <th>Afbeelding</th>
       <th>
       <?php 
-        echo $_POST['winkelwagen'][0]  Product
-        foreach ($_POST['winkelwagen'] as $value) {
-          # code...
-        }
 
-      for ($i=0; $i < max(arry_keys($_POST['winkelwagen'])); $i++) { 
-        $aantal[$i] = $_POST['winkelwagen'][$i];
-        $prijs[$i] = $_POST['winkelwagen'][$i];
+
+        for ($i=0; $i < max(arry_keys($_POST['winkelwagen'])); $i++) { 
+        
         
       }
 
