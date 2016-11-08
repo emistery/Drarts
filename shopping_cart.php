@@ -35,8 +35,6 @@
 
 <!-- Shopping Cart table -->
 
-<?php PRINT_R($_GET); ?>
-
 <div class="col-md-1"></div>
 <div class="col-md-10">
   <div class="panel panel-default">
@@ -49,6 +47,26 @@
       <th>Aantal</th>
       <th>Prijs</th>
       </tr>
+      <?php
+
+      if (!isset($_SESSION['winkelwagen'][0])) {
+        $_SESSION['winkelwagen'][0] = 0;
+      }else{
+           for ($i=0; $i <= max(array_keys($_SESSION['winkelwagen'])); $i++) { 
+          $_SESSION['winkelwagen'][$i] = $_POST['ID'];
+          
+          //echo $_SESSION['winkelwagen'][$i];
+          print_r(max(array_keys($_SESSION['winkelwagen'])));
+          echo $_SESSION['winkelwagen'][$i];
+        }
+        }
+  
+      
+//echo $_SESSION['winkelwagen'][0];
+//echo $_SESSION['winkelwagen'][1];
+//print_r($_SESSION['winkelwagen']);
+      
+      ?>
       <tr>
       <td><a href="Kunst/Schilder/dali1.png"><img src="Kunst/Schilder/dali1.png" class="thumbnail" alt="dali1" style="width:50px;height:50px"></a></td>
       <td>De Volharding der Herinnering <br/> (poster)</td>
