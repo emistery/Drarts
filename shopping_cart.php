@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Shopping Cart</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,26 +34,43 @@
       <!-- BODY-->
 
 <!-- Shopping Cart table -->
+
+<?php PRINT_R($_GET); ?>
+
 <div class="col-md-1"></div>
 <div class="col-md-10">
   <div class="panel panel-default">
-    <div class="panel-heading"><h4>Shopping Cart</h4></div>
+    <div class="panel-heading"><img src="shoppingcart.png" style="width:50px;height:50px"></div>
     <table class="table">
       <tr>
       <th>Afbeelding</th>
-      <th>Product</th>
+      <th>
+      <?php 
+        echo $_POST['winkelwagen'][0]  Product
+        foreach ($_POST['winkelwagen'] as $value) {
+          # code...
+        }
+
+      for ($i=0; $i < max(arry_keys($_POST['winkelwagen'])); $i++) { 
+        $aantal[$i] = $_POST['winkelwagen'][$i];
+        $prijs[$i] = $_POST['winkelwagen'][$i];
+        
+      }
+
+      ?>
+      </th>
       <th>Aantal</th>
       <th>Prijs</th>
       </tr>
       <tr>
       <td><a href="Kunst/Schilder/dali1.png"><img src="Kunst/Schilder/dali1.png" class="thumbnail" alt="dali1" style="width:50px;height:50px"></a></td>
-      <td>De volharding der herinnering <br/> (poster)</td>
+      <td>De Volharding der Herinnering <br/> (poster)</td>
       <td>1</td>
       <td>€15,-</td>
       </tr>
       <tr>
       <td><a href="Kunst/Schilder/vanGogh1.png"><img src="Kunst/Schilder/vanGogh1.png" class="thumbnail" alt="vanGogh1" style="width:50px;height:50px"></td>
-      <td>De sterrennacht <br/> (poster)</td>
+      <td>De Sterrennacht <br/> (poster)</td>
       <td>1</td>
       <td>€15,-</td>
       </tr>
