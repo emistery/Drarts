@@ -59,10 +59,6 @@
           if(empty($_POST)){$emailadres = "";}else{
           $emailadres = $_POST['emailadres'];}
 
-          //Behoud telefoonnummer bij fout
-          if(empty($_POST)){$telefoonnummer = "";}else{
-          $telefoonnummer = $_POST['telefoonnummer'];}
-
           echo "<tr><td>"."Inlognaam: "."</td>
  						<td>"; //Inlognaam veld
  						?><input type="text" name="gebruikernaam" value="<?php echo "$gebruikernaam"; ?>" class="form-control"></td><td>*</td></tr><?php
@@ -93,11 +89,7 @@
  				
         	echo "<tr><td>"."E-mailadres: "."</td></td>
  						<td>"; //E-mail veld
- 						?><input type="text" name="emailadres" value="<?php echo "$emailadres"; ?>" class="form-control"></td></tr><?php
- 					
-          echo "<tr><td>"."Telefoonnummer: "."</td></td>
- 						<td>"; //Telefoonnummer veld
- 						?><input type="text" name="telefoonnummer" value="<?php echo "$telefoonnummer"; ?>" class="form-control"></td></tr>
+ 						?><input type="text" name="emailadres" value="<?php echo "$emailadres"; ?>" class="form-control"></td></tr>
 
         <tr><td>Leverancier</td><td><input type="checkbox" name="leverancier"></td></tr> <!-- Check veld -->
         
@@ -136,12 +128,12 @@
             if(empty($_POST)){}elseif
               ($_POST['wachtwoord'] === $_POST['herhaal_wachtwoord']){
               echo "<br/>";
-              //Check kunstenaar
+              //Check lverancier
 
                 if(array_key_exists('leverancier', $_POST)){
                   // Leverancier staat aan
                   include 'functions.php';
-                  (checkUsername($db, $_POST['gebruikernaam'], $_POST['wachtwoord'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats'], $_POST['emailadres'], $_POST['telefoonnummer'], $_POST['leverancier']=1));
+                  (checkUsername($db, $_POST['gebruikernaam'], $_POST['wachtwoord'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats'], $_POST['emailadres'], 1));
 
                   mysqli_close($db);
 
