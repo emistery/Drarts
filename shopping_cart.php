@@ -1,3 +1,37 @@
+<?php
+//create empty schopping cart
+error_reporting(-1);
+
+$winkelwagen = [];
+
+//if there is a cookie containing a shopping cart, load this cookie into our shopping cart
+if(isset($_COOKIE['winkelwagen'])){
+
+  $cookie = $_COOKIE['winkelwagen'];
+
+//if the is more than 1 artikel in winkelwagen, then they are seperated by an ','
+  if(!strpos($cookie, ',')){
+    $winkelwagen[] = $cookie;
+  } else {
+    //array id*aantal
+    $winkelwagen = explode(',',$cookie);
+  }
+}
+
+//if there is a new item for the shopping cart
+if(isset($_POST['ID']) and isset($_POST['aantal'])){
+  
+  //add it
+  $winkelwagen[] = $_POST['ID']."*".$_POST['aantal'];
+
+
+
+  //store the shopping cart again
+  setcookie('winkelwagen', implode($winkelwagen,','), time()+(60*60*24*7), '/');
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,35 +82,68 @@
       <th>Prijs</th>
       </tr>
       <?php
-
-      if (!isset($_SESSION['winkelwagen'][0])) {
-        $_SESSION['winkelwagen'][0] = 0;
-      }else{
-           for ($i=0; $i <= max(array_keys($_SESSION['winkelwagen'])); $i++) { 
-          $_SESSION['winkelwagen'][$i] = $_POST['ID'];
+      $total = 0;
+      if (!isset($winkelwagen[0])) {
+        $winkelwagen[0] = 0;
+      } else {
+        //for every artikel in winkelwagen do:
+        foreach ($winkelwagen as $artikel) { 
           
-          //echo $_SESSION['winkelwagen'][$i];
-          print_r(max(array_keys($_SESSION['winkelwagen'])));
-          echo $_SESSION['winkelwagen'][$i];
+          //split id en aantal
+          //artikel[0] -> id
+          //artikel[1] -> aantal
+          $artikelenaantal = explode('*', $artikel);
+
+          //select on id
+          $query = "SELECT afbeelding, prijs, beschrijving FROM artikel WHERE ID = ".$artikelenaantal[0];
+          
+
+          $result = mysqli_query($db, $query) or die('error querying datebase.');
+
+          while ($row = mysqli_fetch_assoc($result)){
+            //prijs = prijs van artikel * aantal
+            $prijs = $row['prijs'] * $artikelenaantal[1];
+
+
+          //totalprijs
+          $total = $total + $prijs;
+
+          print("<tr>"
+          . "<td><a href=".$row ['afbeelding']. "><img src=".$row ['afbeelding']
+          .   " class='thumbnail' alt=".$row ['afbeelding']
+          . " style='width:50px;height:50px'></a></td>"
+          . "<td>".$row ['beschrijving']. "</td>"
+          . "<td>".$artikelenaantal[1]."</td>"
+          . "<td>€".$prijs.",-</td>"
+          . "</tr>");
+
+          
+
+          }
+          //echo $winkelwagen[$i];
+          //print_r(max(array_keys($winkelwagen)));
+          //echo $winkelwagen[$i];
         }
-        }
+      }
   
-      
-//echo $_SESSION['winkelwagen'][0];
-//echo $_SESSION['winkelwagen'][1];
-//print_r($_SESSION['winkelwagen']);
-      
       ?>
+<!--//echo $winkelwagen[0];
+//echo $winkelwagen[1];
+//print_r($winkelwagen);
+      
+/*    ?>
       <tr>
       <td><a href="Kunst/Schilder/dali1.png"><img src="Kunst/Schilder/dali1.png" class="thumbnail" alt="dali1" style="width:50px;height:50px"></a></td>
       <td>De Volharding der Herinnering <br/> (poster)</td>
       <td>1</td>
       <td>€15,-</td>
       </tr>
-
+*/-->
    
     </table>
-    <div class="panel-footer pull-right">Totaal: €15,-</div>
+    <div class="panel-footer pull-right">Totaal: €<?php echo $total; ?>,- <a href="betaald.php" class="button">Betalen</a></div>
+    <div> 
+    </div>
     </div>
 
 <br/>

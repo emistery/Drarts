@@ -29,10 +29,11 @@
       <!-- /NAVBAR-->
 
       <!-- BODY-->
-
+<!-- combobox-->      
 <div class="col-md-12">
  <form method="post">
     <select name ="ordenen" onchange="this.form.submit()">
+    <!-- controls if ordenen method is selected -->
     <option value="a-z" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "a-z"){print(" selected ");} ?>>a-z</option> 
     <option value="z-a" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "z-a"){print(" selected ");} ?>>z-a</option>
     <option value="g-d" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "g-d"){print(" selected ");} ?>>goedkoop-duur</option>  
@@ -45,15 +46,14 @@
 
 
 <?php
-//functie
-
+//query
 
     $query = "SELECT a.ID, beschrijving, prijs, a.afbeelding, naam FROM artikel a JOIN kunstenaar k ON a.Kunstenaar_ID = k.ID ";
     mysqli_query($db, $query) or die('error querying datebase.');
 
           
           $query .= " order by "; 
-
+//combobox
 if(isset($_POST['ordenen'])){
     if($_POST['ordenen'] == "z-a"){
        $query = $query . "beschrijving desc";
@@ -71,7 +71,7 @@ if(isset($_POST['ordenen'])){
     $result = mysqli_query($db, $query) or die('error querying datebase.');
 
     $start = 0;
-    
+// galerij    
     while ($row = mysqli_fetch_assoc($result)){
      $gallerydiv = "<div class= 'row'>"
     . "<div class= 'col-md-4'>"
