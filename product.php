@@ -57,10 +57,8 @@
 			Het was de snelste manier om een mooie border eromheen te krijgen.-->
 
 				<pre>
-					<?php include 'price_total.php' ?>
-					<form action="/Drarts/shopping_cart.php" method="get">Prijs:		€<?php
-					$ID = $_GET['name']; echo productPage($db, $ID)[2]; ?>		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><br>aantal: 	<input type="number" name="quantity" min="1" max="100" value="1"><br><br><br>Totaal:		€<?php echo price_total($numbervalue, $price_piece) ?>
-					<br><br><input type="button" name="addtocart" value="Voeg toe aan winkewagentje"><br><br><br><input type="submit" name="tocart" value="Naar winkelwagentje">
+					<form action="/Drarts/shopping_cart.php" method="post">Prijs:		€<?php
+					$ID = $_GET['name']; echo productPage($db, $ID)[2]; ?>		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><?php include 'price_total.php' ?><input type="submit" name="tocart" value="Naar winkelwagentje">
     				</form>
     			</pre>
     		</div>
