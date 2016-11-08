@@ -297,4 +297,26 @@ function updateAccount($username, $db, $column, $data){
 	$query = "UPDATE klant SET '$column' = '$data' WHERE gebruikersnaam = '$username'";
 	mysqli_query($db, $query) or die ('Error querying database.'  . mysqli_error($db));
 }
+
+function productPage($db, $ID){
+	$query = "SELECT * FROM artikel where ID = $ID"
+	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
+	if($result->num_rows == 0){
+		return false;
+	} else{
+	while($row = mysqli_fetch_assoc($result)){
+		$ID = $row['ID'];
+		$beschrijving = $row['beschrijving'];
+		$prijs = $row['prijs'];
+		$voorraad_aantal = $row['voorraad_aantal'];
+		$aantal_exemplaren = $row['aantal_exemplaren'];
+		$voorraad_minimum_aantal = $row['voorraad_minimum_aantal'];
+		$afbeelding = $row['afbeelding'];
+		$Kunstenaar_ID = $row['Kunstenaar_ID'];
+	}
+	$productData = array($ID, $beschrijving, $prijs, $voorraad_aantal, $aantal_exemplaren, $voorraad_minimum_aantal, $afbeelding, $Kunstenaar_ID);
+	return $productData;
+}
+//productPage($db, $ID)[0]
+//SELECT product where $ID is the id number and the integer is the selected column
 ?>
