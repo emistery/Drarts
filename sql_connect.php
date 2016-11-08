@@ -257,11 +257,44 @@ function searchQuery($db, $search){
 //echo searchQuery($db, "%" . $search . "%")[1][1];
 
 function accountQuery($db, $username){
+	$query = "SELECT * FROM klant where gebruikersnaam = '$username'";
+	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
 
+	$result = mysqli_query($db, $query);
+//	$row = mysqli_fetch_array($result);
+	if($result->num_rows == 0){
+		return false;
+	} else{
+	while($row = mysqli_fetch_assoc($result)){
+		$gebruikersnaam = $row['gebruikersnaam'];
+		$leverancier = $row['leverancier'];
+		$wachtwoord = $row['wachtwoord'];
+		$emailadres = $row['emailadres'];
+		$naam = $row['naam'];
+		$adres = $row['adres'];
+		$postcode = $row['postcode'];
+		$woonplaats = $row['woonplaats'];
+	}
+	$accountData = array($gebruikersnaam, $leverancier, $wachtwoord, $emailadres, $naam, $adres, $postcode, $woonplaats);
+	return $accountData;
+}
+}
+//0 = username
+//1 = leverancier (true = 1)
+//2 = password
+//3 = email
+//4 = name
+//5 = address
+//6 = postal code
+//7 = city
 
-
-
-
+function updatePass($username, $db, $newpassword){
+	$query =  "UPDATE klant SET wachtwoord = '$newpassword' WHERE gebruikersnaam = '$username'";
+	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
 }
 
+function updateAccount($username, $db, $column, $data){
+	$query = "UPDATE klant SET '$column' = '$data' WHERE gebruikersnaam = '$username'";
+	mysqli_query($db, $query) or die ('Error querying database.'  . mysqli_error($db));
+}
 ?>
