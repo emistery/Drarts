@@ -31,7 +31,7 @@
 
     	<!-- BODY-->
 
-<!-- Use the following code to summon information about the product from the database:	<?php $ID = $_GET['name']; echo productPage($db, $ID)[1]; ?>-->
+<!-- Use the following code to summon information about the product from the database:	<?php $ID = $_GET['name'];echo productPage($db, $ID)[1]; ?>-->
 
     <div class="row">
     	<div class="col-md-2">
@@ -43,24 +43,26 @@
 	<div class="row">
 		<div class="col-md-1">
 		</div>
-  		<div class="col-md-5">
-    		<a href="<?php $ID = $_GET['name']; echo productPage($db, $ID)[6]; ?>" class="thumbnail" img src="kunst2.jpg" alt="kunst2">
-    			<img src="<?php
-					$ID = $_GET['name']; echo productPage($db, $ID)[6]; ?>" style="height:100%; width:100%">
+  		<div class="col-md-5">	<!-- De naam van het plaatje wordt opgeroepen uit de database -->
+    		<a href="<?php echo productPage($db, $ID)[6]; ?>" class="thumbnail" img src="<?php echo productPage($db, $ID)[6]; ?>" alt="<?php echo productPage($db, $ID)[1]; ?>">
+    			<img src="<?php echo productPage($db, $ID)[6]; ?>" style="height:100%; width:100%">
     		</a>
     	</div>
     	<div class="col-md-2">
     	</div>
     	<div class="col-md-3">
 			<div> 
-			<!--Dit volgende stuk code is een beetje een rotzooi, omdat alles tussen <pre> tags staat.
-			Het was de snelste manier om een mooie border eromheen te krijgen.-->
+			<!--The following form is a mess to look at, because HTML treats whitespace between tags as actual space -->
 
 				<pre>
 					<form action="/Drarts/shopping_cart.php" method="POST">Prijs:		€<?php
 					$ID = $_GET['name']; echo productPage($db, $ID)[2]; ?>		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><?php include 'price_total.php' ?><input type="submit" value="In winkelwagentje">
+
+				<pre>	<!-- The information in this form is sent to the shopping_cart.php page -->
+					<form action="/Drarts/shopping_cart.php" method="post">Prijs:		€<?php echo productPage($db, $ID)[2]; ?>		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><?php include 'price_total.php' ?><input type="submit" value="In winkelwagentje">
+
 					<input type="hidden" name="ID" <?php echo "value=" . $_GET['name'] ?> >
-    				</form>
+    				</form>	<!-- The hidden input field is used to send the product_ID to the shopping cart -->
     			</pre>
     		</div>
     	</div>
@@ -70,8 +72,8 @@
     <div class="row">
     	<div class="col-md-1">
     	</div>
-    	<div class="col-md-6">
-    		<?php $ID = $_GET['name']; echo productPage($db, $ID)[1]; ?>
+    	<div class="col-md-6">	<!-- The description hould be here, for now there is only placeholder text -->
+    		<?php echo productPage($db, $ID)[1]; ?>
     		<div class="boxed">
     			<?php include 'Loremipsum.php' ?>
     		</div>

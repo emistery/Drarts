@@ -12,8 +12,7 @@ Product toevoegen
 <div class="input-group input-group-lg">
   <input name="artistID" type="text" class="form-control" placeholder="Kunstenaar ID" aria-describedby="sizing-addon2">
 </div>
-<!-- Enter name of image, we couldn't find a way to upload image, so image already has to be in folder-->
- <div class="input-group input-group-lg">
+<div class="input-group input-group-lg">
   <input name="image" type="text" class="form-control" placeholder="Link naar afbeelding" aria-describedby="sizing-addon2">
 </div>  
 <div class="input-group input-group-lg">
@@ -21,3 +20,4 @@ Product toevoegen
   <input type="submit" class="form-control" aria-describedby="sizing-addon2">
 </div> 
 </form>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
