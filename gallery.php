@@ -29,23 +29,21 @@
       <!-- /NAVBAR-->
 
       <!-- BODY-->
-<div class="row">
-<div class="col-md-1">
+
+<div class="col-md-12">
  <form method="post">
     <select name ="ordenen" onchange="this.form.submit()">
     <option value="a-z" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "a-z"){print(" selected ");} ?>>a-z</option> 
     <option value="z-a" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "z-a"){print(" selected ");} ?>>z-a</option>
     <option value="g-d" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "g-d"){print(" selected ");} ?>>goedkoop-duur</option>  
     <option value="d-g" <?php if(isset($_POST['ordenen']) && $_POST['ordenen'] == "d-g"){print(" selected ");} ?>>duur-goedkoop</option>
-      
+
     </select>
-    
-        
+
 </form> 
 </div>
-<div class="col-md-11">
-</div>
-</div>
+
+
 <?php
 //functie
 

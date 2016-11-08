@@ -46,19 +46,19 @@
       <th>Prijs</th>
       </tr>
       <tr>
-      <td><img src="Kunst/Schilder/dali1.png" alt="dali1" style="width:50px;height:50px"></td>
+      <td><a href="Kunst/Schilder/dali1.png"><img src="Kunst/Schilder/dali1.png" class="thumbnail" alt="dali1" style="width:50px;height:50px"></a></td>
       <td>De volharding der herinnering <br/> (poster)</td>
       <td>1</td>
       <td>€15,-</td>
       </tr>
       <tr>
-      <td><img src="Kunst/Schilder/vanGogh1.png" alt="vanGogh1" style="width:50px;height:50px"></td>
+      <td><a href="Kunst/Schilder/vanGogh1.png"><img src="Kunst/Schilder/vanGogh1.png" class="thumbnail" alt="vanGogh1" style="width:50px;height:50px"></td>
       <td>De sterrennacht <br/> (poster)</td>
       <td>1</td>
       <td>€15,-</td>
       </tr>
       <tr>
-      <td><img src="Kunst/Schilder/brueghel1.png" alt="brueghel1" style="width:50px;height:50px"></td>
+      <td><a href="Kunst/Schilder/brueghel1.png"><img src="Kunst/Schilder/brueghel1.png" class="thumbnail" alt="brueghel1" style="width:50px;height:50px"></td>
       <td>Dulle Griet <br/> (poster)</td>
       <td>1</td>
       <td>€15,-</td>
