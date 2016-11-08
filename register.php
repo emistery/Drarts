@@ -135,10 +135,14 @@
                   (checkUsername($db, $_POST['gebruikernaam'], '1', $_POST['wachtwoord'], $_POST['emailadres'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats']));
 
                   mysqli_close($db);
-
+                  echo "<font color='green'>&nbsp &nbsp &nbsp &nbspUw account is aangemaakt. U kunt nu inloggen</font>";
+                  
                 }else{
                   //Leverancier staat uit
                   (checkUsername($db, $_POST['gebruikernaam'], '0', $_POST['wachtwoord'], $_POST['emailadres'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats']));
+
+                  mysqli_close($db);
+                  echo "<font color='green'>&nbsp &nbsp &nbsp &nbspUw account is aangemaakt. U kunt nu inloggen</font>";
                 }
 
 
@@ -146,10 +150,6 @@
               $rePasswd = $_POST['wachtwoord'];
               echo "<br/>&nbsp &nbsp &nbsp &nbspHerhaald wachtwoord komt niet overeen met het ingevoerde wachtwoord";
 
-                  mysqli_close($db);
-
-                  header("Location: http://example.com/myOtherPage.php");
-                    die();
             }
           }
         }

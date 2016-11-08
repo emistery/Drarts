@@ -31,13 +31,9 @@
 
     	<!-- BODY-->
       <!-- Test -->
-      <?php
-        if(empty($_POST)){
-          echo "POST is empty";
-        }else{
-          print_r($_POST);
-        }
-      ?>
+      <H1>Uw account is gemaakt.</H1>
+      <br/>
+      <H1>U kunt nu inloggen.</H1>
 
     	<!-- /BODY-->
 
