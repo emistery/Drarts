@@ -132,7 +132,6 @@
 
                 if(array_key_exists('leverancier', $_POST)){
                   // Leverancier staat aan
-                  include 'functions.php';
                   (checkUsername($db, $_POST['gebruikernaam'], $_POST['wachtwoord'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats'], $_POST['emailadres'], 1));
 
                   mysqli_close($db);

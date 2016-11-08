@@ -320,6 +320,12 @@ function productPage($db, $ID){
 }
 }
 
+function checkUsername($db, $gebruikersnaam, $wachtwoord, $naam, $adres, $postcode, $woonplaats, $emailadres, $leverancier){
+	$query = 	"INSERT INTO Klant
+				VALUES ('$gebruikersnaam', '$wachtwoord', '$naam', '$adres', '$postcode', '$woonplaats', '$emailadres', '$leverancier')";
+
+	mysqli_query($db, $query) or die('Inlognaam bestaat al');}
+
 //productPage($db, $ID)[0]
 //SELECT product where $ID is the id number and the integer is the selected column
 ?>
