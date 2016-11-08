@@ -45,15 +45,8 @@
       <tr>
       <th>Afbeelding</th>
       <th>
-      <?php 
 
 
-        for ($i=0; $i < max(arry_keys($_POST['winkelwagen'])); $i++) { 
-        
-        
-      }
-
-      ?>
       </th>
       <th>Aantal</th>
       <th>Prijs</th>
