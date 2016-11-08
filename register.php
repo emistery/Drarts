@@ -132,12 +132,13 @@
 
                 if(array_key_exists('leverancier', $_POST)){
                   // Leverancier staat aan
-                  (checkUsername($db, $_POST['gebruikernaam'], $_POST['wachtwoord'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats'], $_POST['emailadres'], 1));
+                  (checkUsername($db, $_POST['gebruikernaam'], '1', $_POST['wachtwoord'], $_POST['emailadres'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats']));
 
                   mysqli_close($db);
 
                 }else{
                   //Leverancier staat uit
+                  (checkUsername($db, $_POST['gebruikernaam'], '0', $_POST['wachtwoord'], $_POST['emailadres'], $_POST['naam'], $_POST['adres'], $_POST['postcode'], $_POST['woonplaats']));
                 }
 
 
