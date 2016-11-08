@@ -23,7 +23,7 @@ $result = mysqli_query($db, $query);
     } else {
 		// login failed save error to a session
 		
-  		$_SESSION['error'] = 'Sorry, wrong username or password';
+  		$_SESSION['error'] = 'Verkeerd gebruikersnaam en/of wachtwoord ingevuld, u wordt automatisch naar de hoofdpagina omgeleid';
   		echo $_SESSION['error'];
   		header( "refresh:5;url=home.php" );
    }
