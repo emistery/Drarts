@@ -59,49 +59,49 @@
           if(empty($_POST)){$emailadres = "";}else{
           $emailadres = $_POST['emailadres'];}
 
-          echo "<tr><td>"."Inlognaam: "."</td>
+          echo "<tr><td>"."&nbsp &nbsp &nbsp &nbspInlognaam: "."</td>
  						<td>"; //Inlognaam veld
  						?><input type="text" name="gebruikernaam" value="<?php echo "$gebruikernaam"; ?>" class="form-control"></td><td>*</td></tr><?php
  					
-          echo "<tr><td>"."Wachtwoord: "."</td>
+          echo "<tr><td>"."&nbsp &nbsp &nbsp &nbspWachtwoord: "."</td>
  						<td>"; //Wachtwoord veld
  						?><input type="password" name="wachtwoord" class="form-control"></td><td>*</td></tr><?php
  					
-          echo "<tr><td>"."Herhaal wachtwoord:"." "."</td></td>
+          echo "<tr><td>"."&nbsp &nbsp &nbsp &nbspHerhaal wachtwoord:&nbsp &nbsp"." "."</td></td>
  						<td>"; //Herhaal wachtwoord veld
  						?><input type="password" name="herhaal_wachtwoord" class="form-control"></td><td>*</td></tr><?php
  					
-          echo "<tr><td>"."Naam: <br/>"."</td></td>
+          echo "<tr><td>"."&nbsp &nbsp &nbsp &nbspNaam: <br/>"."</td></td>
  						<td>"; //Naam veld
  						?><input type="text" name="naam" value="<?php echo "$naam"; ?>" class="form-control"></td></tr><?php
  					
-          echo "<tr><td>"."Adres: "."</td></td>
+          echo "<tr><td>"."&nbsp &nbsp &nbsp &nbspAdres: "."</td></td>
  						<td>"; //Adres veld
  						?><input type="text" name="adres" value="<?php echo "$adres"; ?>" class="form-control"></td></tr><?php
 
-          echo "<tr><td>"."Postcode: "."</td></td>
+          echo "<tr><td>"."&nbsp &nbsp &nbsp &nbspPostcode: "."</td></td>
             <td>"; //Postcode veld
             ?><input type="text" name="postcode" value="<?php echo "$postcode"; ?>" class="form-control"></td></tr><?php
 
-          echo "<tr><td>"."Woonplaats: "."</td></td>
+          echo "<tr><td>"."&nbsp &nbsp &nbsp &nbspWoonplaats: "."</td></td>
             <td>"; //Woonplaats veld
             ?><input type="text" name="woonplaats" value="<?php echo "$woonplaats"; ?>" class="form-control"></td></tr><?php
  				
-        	echo "<tr><td>"."E-mailadres: "."</td></td>
+        	echo "<tr><td>"."&nbsp &nbsp &nbsp &nbspE-mailadres: "."</td></td>
  						<td>"; //E-mail veld
  						?><input type="text" name="emailadres" value="<?php echo "$emailadres"; ?>" class="form-control"></td></tr>
 
-        <tr><td>Leverancier</td><td><input type="checkbox" name="leverancier"></td></tr> <!-- Check veld -->
+        <tr><td>&nbsp &nbsp &nbsp &nbspLeverancier</td><td><input type="checkbox" name="leverancier"></td></tr> <!-- Check veld -->
         
 
  				<?php
 
  				echo "</table>";
 
- 				echo "<br/>Alle velden met * zijn verplicht!";
+ 				echo "<br/>&nbsp &nbsp &nbsp &nbspAlle velden met * zijn verplicht!";
  				?></font>
 
- 			<br/><input type="submit" name="submit" value="Account maken" class="btn btn-primary">
+ 			<br/>&nbsp &nbsp &nbsp &nbsp<input type="submit" name="submit" value="Account maken" class="btn btn-primary">
  			</form>
 
       <font size="3" color="red">
@@ -109,19 +109,19 @@
 
         //Checkt of velden zijn ingevoerd
         if(empty($_POST)){
-          echo "<br/>Vul de velden in.";
+          echo "<br/>&nbsp &nbsp &nbsp &nbspVul de velden in.";
           }else{
 
           //Checkt invoer van gebruikernaam
           if(empty($_POST['gebruikernaam'])){
-            echo "<br/>Vul een inlognaam in.";
+            echo "<br/>&nbsp &nbsp &nbsp &nbspVul een inlognaam in.";
           }else{
             $user = $_POST['gebruikernaam'];
           }
 
           //Checkt invoer van wachtwoord
           if(empty($_POST['wachtwoord'])){
-            echo "<br/>Vul een wachtwoord in.";
+            echo "<br/>&nbsp &nbsp &nbsp &nbspVul een wachtwoord in.";
           }else{
             $passwd = $_POST['wachtwoord'];
           
@@ -144,7 +144,12 @@
 
             }else{
               $rePasswd = $_POST['wachtwoord'];
-              echo "<br/>Herhaald wachtwoord komt niet overeen met het ingevoerde wachtwoord";
+              echo "<br/>&nbsp &nbsp &nbsp &nbspHerhaald wachtwoord komt niet overeen met het ingevoerde wachtwoord";
+
+                  mysqli_close($db);
+
+                  header("Location: http://example.com/myOtherPage.php");
+                    die();
             }
           }
         }
