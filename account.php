@@ -46,7 +46,16 @@ $username = $_SESSION['username'];
  <div class="col-md-8">
 <ul class="list-group">
   <li class="list-group-item">Uw gebruikersnaam = <?php echo accountQuery($db, $username)[0] ?></li>
-  <li class="list-group-item">Leverancier? </li>
+  <li class="list-group-item">Leverancier? 
+  <?php $leverancier = accountQuery($db, $username)[1] ;
+  		if($leverancier == 1){
+  			echo "Ja";
+  		}else{
+  			echo "Nee";
+  		}
+
+
+  			?> </li>
   <li class="list-group-item">Pas uw wachtwoord aan: 
   <form action="update.php" method="POST">
 <div class="input-group">
@@ -63,6 +72,16 @@ $username = $_SESSION['username'];
   <li class="list-group-item">Uw woonplaats = <?php echo accountQuery($db, $username)[7] ?></li>
 </ul>
 </div>
+<?php
+if($leverancier == 1){
+	include 'leverancier.php';
+}
+
+
+
+
+
+?>
 
 
     	<!-- /BODY-->

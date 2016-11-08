@@ -3,8 +3,7 @@ include 'sql_connect.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-echo $username;
-echo $password;
+
 
 $query = "SELECT * FROM klant WHERE gebruikersnaam = '$username' AND wachtwoord = '$password' ";
 mysqli_query($db, $query) or die('Error querying database.' . mysqli_error($db));
@@ -24,7 +23,9 @@ $result = mysqli_query($db, $query);
     } else {
 		// login failed save error to a session
 		
-  		$_SESSION['error'] = 'Sorry, wrong username or password';
+  		$_SESSION['error'] = 'Verkeerd gebruikersnaam en/of wachtwoord ingevuld, u wordt automatisch naar de hoofdpagina omgeleid';
+  		echo $_SESSION['error'];
+  		header( "refresh:5;url=home.php" );
    }
 
 
