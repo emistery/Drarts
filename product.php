@@ -43,10 +43,9 @@
 	<div class="row">
 		<div class="col-md-1">
 		</div>
-  		<div class="col-md-5">
-    		<a href="<?php $ID = $_GET['name']; echo productPage($db, $ID)[6]; ?>" class="thumbnail" img src="kunst2.jpg" alt="kunst2">
-    			<img src="<?php
-					$ID = $_GET['name']; echo productPage($db, $ID)[6]; ?>" style="height:100%; width:100%">
+  		<div class="col-md-5">	<!---->
+    		<a href="<?php $ID = $_GET['name']; echo productPage($db, $ID)[6]; ?>" class="thumbnail" img src="<?php $ID = $_GET['name']; echo productPage($db, $ID)[6]; ?>" alt="<?php $ID = $_GET['name']; echo productPage($db, $ID)[1]; ?>">
+    			<img src="<?php	$ID = $_GET['name']; echo productPage($db, $ID)[6]; ?>" style="height:100%; width:100%">
     		</a>
     	</div>
     	<div class="col-md-2">
