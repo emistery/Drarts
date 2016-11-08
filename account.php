@@ -45,8 +45,10 @@ $username = $_SESSION['username'];
  ?>
  <div class="col-md-8">
 <ul class="list-group">
+<!-- All data of user is queried in database and displayed on this page -->
   <li class="list-group-item">Uw gebruikersnaam = <?php echo accountQuery($db, $username)[0] ?></li>
   <li class="list-group-item">Leverancier? 
+  <!-- Checks if the user is a supplier, displays yes or no -->
   <?php $leverancier = accountQuery($db, $username)[1] ;
   		if($leverancier == 1){
   			echo "Ja";
@@ -58,6 +60,7 @@ $username = $_SESSION['username'];
   			?> </li>
   <li class="list-group-item">Pas uw wachtwoord aan: 
   <form action="update.php" method="POST">
+  <!-- Update password and send it to update.php -->
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">@</span>
   <input type="password" class="form-control" placeholder="Nieuw wachtwoord" name="newpassword" aria-describedby="basic-addon1">
@@ -72,6 +75,7 @@ $username = $_SESSION['username'];
   <li class="list-group-item">Uw woonplaats = <?php echo accountQuery($db, $username)[7] ?></li>
 </ul>
 </div>
+<!-- Checks again if user is supplier, if yes, display function to insert items -->
 <?php
 if($leverancier == 1){
 	include 'leverancier.php';

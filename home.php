@@ -37,6 +37,7 @@ include 'navbar.php';
    </div>
   <div class="col-md-4" >
     <a href="product.php?name=<?php echo artikelQuery($db)[0][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>" class="thumbnail">
+    <!-- Product with highest value in stock is placed on home page with according name, price and image-->
       <p>  <?php echo artikelQuery($db)[1][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?> </p>
       <img src="<?php echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])] ?>" alt="kunst1" style="width:100%;height:100%">
       <br>
