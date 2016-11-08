@@ -8,9 +8,4 @@ $newpassword = $_POST['newpassword'];
 updatePass($username, $db, $newpassword);
 header("Location: account.php");
 
-
-
-
-
-
 ?>
