@@ -17,6 +17,13 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
+  <style>
+    body {
+     background-image: url(Achtergrond/achtergrond1.jpg);
+    }
+  </style>
+
   <body>
   <!-- HEADER-->
     <?php include 'header.php' ?>
@@ -31,6 +38,7 @@ include 'navbar.php';
       <!-- /NAVBAR-->
 
       <!-- BODY-->
+
 <?php //echo artikelQuery($db)[6][array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3])]; ?>
  <div class="row">
    <div class="col-md-4">

@@ -20,6 +20,13 @@
 
 
   </head>
+
+  <style>
+    body {
+    background-image: url(Achtergrond/achtergrond2.jpg);
+    }
+  </style>
+
   <body>
   <!-- HEADER-->
     <?php include 'header.php' ?>
