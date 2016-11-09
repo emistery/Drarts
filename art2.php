@@ -21,6 +21,7 @@
 
   </head>
 
+<!-- The background of the page. -->
  <style>
     body {
     background-image: url(Achtergrond/achtergrond2.jpg);
@@ -40,6 +41,7 @@
 
       <!-- BODY-->
 
+<!-- The buttons with which you can choose between the 2 different kinds of artists: 'Schilder' and 'Beeldend Kunstenaar'. -->
 <div class="col-md-12">
   <div class="btn-group-vertical" role="group" aria-label="Koopkunst">
   <a href="art.php" class="btn btn-default" role="button">Schilder</a>
@@ -48,6 +50,7 @@
   </div>
 </div>
 
+<!-- The 1st 'Beeldend Kunstenaar'. If you click on the thumbnail you will be redirected to art_inside.php which will give you detailed information about the artist. -->
  <div class="row">
    <div class="col-md-1">
    </div>
@@ -58,6 +61,8 @@
       <br>
     </a>
   </div>
+
+<!-- The most familiar painting which belongs to the 1st 'Beeldend Kunstenaar'. -->
   <div class="col-md-2">
     <a href="Kunst/Beeld/jansen1.png" class="thumbnail">
       <p>jansen1</p>
@@ -65,6 +70,7 @@
       <br>
     </a>
   </div>
+
 
   <div class="pull-left"> <p class="navbar-text"> Tekst over Jansen.</p> </div>
 

@@ -18,6 +18,7 @@
     <![endif]-->
   </head>
 
+<!-- The background of the page. -->
   <style>
     body {
      background-image: url(Achtergrond/achtergrond1.jpg);

@@ -21,6 +21,7 @@
 
   </head>
 
+<!-- The background of the page. -->
   <style>
     body {
     background-image: url(Achtergrond/achtergrond2.jpg);
@@ -40,6 +41,7 @@
 
       <!-- BODY-->
 
+<!-- The buttons with which you can choose between the 2 different kinds of artists: 'Schilder' and 'Beeldend Kunstenaar'. -->
 <div class="col-md-12">
   <div class="btn-group-vertical" role="group" aria-label="Koopkunst">
   <a href="art.php" class="btn btn-default" role="button">Schilder</a>
@@ -48,6 +50,7 @@
   </div>
 </div>
 
+<!-- The 1st 'Schilder'. If you click on the thumbnail you will be redirected to art_inside.php which will give you detailed information about the artist. -->
  <div class="row">
    <div class="col-md-1">
    </div>
@@ -57,9 +60,9 @@
         <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
         <br>
     </a>
-     
-    </a>
   </div>
+
+<!-- The most familiar painting which belongs to the 1st 'Schilder'. -->
   <div class="col-md-2">
     <a href="Kunst/Schilder/dali1.png" class="thumbnail">
       <p>dali1</p>
@@ -68,11 +71,12 @@
     </a>
   </div>
 
+<!-- A bit of information about the 1st 'Schilder'. -->
   <div class="pull-left"> <p class="navbar-text"> Tekst over Dali.</p> </div>
+ </div>
 
-  </div>
-
-   <div class="row">
+<!-- The 2nd 'Schilder'. If you click on the thumbnail you will be redirected to art_inside.php which will give you detailed information about the artist. -->
+ <div class="row">
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
@@ -82,6 +86,8 @@
       <br>
     </a>
   </div>
+
+<!-- The most familiar painting which belongs to the 2nd 'Schilder'. -->
   <div class="col-md-2">
     <a href="Kunst/Schilder/vanGogh1.png" class="thumbnail">
       <p>vanGogh1</p>
@@ -90,14 +96,14 @@
     </a>
   </div>
 
-  <div class="pull-left"> <p class="navbar-text"> Tekst over Van Gogh.</p> </div>
+<!-- A bit of information about the 2nd 'Schilder'. -->
+  <div class="pull-left"> <p class="navbar-text"> Tekst over Van Gogh.</p></div>
 
-<div class="col-md-2">
-   </div>
-  </div>
+<div class="col-md-2"></div>
+ </div>
 
-      <!-- /BODY-->
-   <div class="row">
+<!-- The 3rd 'Schilder'. If you click on the thumbnail you will be redirected to art_inside.php which will give you detailed information about the artist. -->
+ <div class="row">
    <div class="col-md-1">
    </div>
   <div class="col-md-2">
@@ -107,6 +113,8 @@
       <br>
     </a>
   </div>
+
+<!-- The most familiar painting which belongs to the 3rd 'Schilder'. -->
   <div class="col-md-2">
     <a href="Kunst/Schilder/brueghel1.png" class="thumbnail">
       <p>brueghel1</p>
@@ -117,7 +125,9 @@
       <br>
   </div>
 
-  <div class="pull-left"> <p class="navbar-text"> Tekst over Brueghel.</p> </div>
+<!-- A bit of information about the 3rd 'Schilder'. -->
+  <div class="pull-left"> <p class="navbar-text"> Tekst over Brueghel.</p></div>
+ </div>
 
       <!-- NAV -->
 
