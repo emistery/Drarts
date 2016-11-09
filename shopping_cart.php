@@ -1,5 +1,11 @@
 <?php
-//create empty schopping cart
+include 'sql_connect.php';
+if (isset($_SESSION['authorized'])) {
+
+ 
+
+
+
 error_reporting(-1);
 
 $winkelwagen = [];
@@ -30,7 +36,9 @@ if(isset($_POST['ID']) and isset($_POST['aantal'])){
   setcookie('winkelwagen', implode($winkelwagen,','), time()+(60*60*24*7), '/');
 
 }
-
+}
+ 
+  $error = "U moet ingelogd zijn om te bestellen! U wordt automatisch naar de hoofdpagina omgeleid";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,6 +79,12 @@ if(isset($_POST['ID']) and isset($_POST['aantal'])){
 
 <div class="col-md-1"></div>
 <div class="col-md-10">
+<?php
+if (!isset($_SESSION['authorized'])){
+echo $error;
+header( "refresh:5;url=home.php" );
+}
+?>
   <div class="panel panel-default">
     <div class="panel-heading"><img src="shoppingcart.png" style="width:50px;height:50px"></div>
     <table class="table">
