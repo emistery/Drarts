@@ -63,7 +63,7 @@
     <div class="row">
     	<div class="col-md-1">
     	</div>
-    	<div class="col-md-6">	<!-- The description hould be here, for now there is only placeholder text -->
+    	<div class="col-md-6">	<!-- The description should be here, for now there is only placeholder text -->
     		<?php echo productPage($db, $ID)[1]; ?>
     		<div class="boxed">
     			<?php include 'Loremipsum.php' ?>
