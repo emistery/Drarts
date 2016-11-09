@@ -9,7 +9,7 @@ setcookie('winkelwagen', "", 0, '/');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Betaling afgerond</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@ include 'navbar.php';
 
       <!-- BODY-->
 
-
+    <div class="col-md-12">
      <h1>U heeft betaald, uw bestelling is afgerond.</h1>
 
 
