@@ -104,7 +104,7 @@
  			<br/>&nbsp &nbsp &nbsp &nbsp<input type="submit" name="submit" value="Account maken" class="btn btn-primary">
  			</form>
 
-      <font size="3" color="red">
+      <font size="3" color="red"> <!-- Maakt foutmelding rood -->
       <?php
 
         //Checkt of velden zijn ingevoerd
@@ -128,7 +128,7 @@
             if(empty($_POST)){}elseif
               ($_POST['wachtwoord'] === $_POST['herhaal_wachtwoord']){
               echo "<br/>";
-              //Check lverancier
+              //Check leverancier
 
                 if(array_key_exists('leverancier', $_POST)){
                   // Leverancier staat aan
@@ -146,7 +146,7 @@
                 }
 
 
-            }else{
+            }else{ 
               $rePasswd = $_POST['wachtwoord'];
               echo "<br/>&nbsp &nbsp &nbsp &nbspHerhaald wachtwoord komt niet overeen met het ingevoerde wachtwoord";
 
