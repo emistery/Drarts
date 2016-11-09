@@ -39,7 +39,7 @@ include 'navbar.php';
       <!-- /NAVBAR-->
 
       <!-- BODY-->
-
+<!-- The name of the artist. -->
   <div class="row">
   <div class="col-md-6"></div>
   <div class="col-md-2">
@@ -47,14 +47,18 @@ include 'navbar.php';
      </div>
      </div>
 
+<!-- Detailed information about the artist. -->
   <div class="row">
   <div class="col-md-3"></div>
   <div class="col-md-8">
-     <p class="navbar-text"><center>Dit is een hele hoop tekst over Salvador Dali. ifbdsuhfuidshfbsduibhvbsudihfdsivnbudsihfsuighsvbdjbueisdhfbuiesdbhfuihgukwhguiwlwruhvhilewbhewuidlhfuiwslhfuewilshfuwishfuisdhfvbuld sihgy8ikfesdfghfghfguihsidufhckdsghvy udkshbfgidskfyudskhgfudskhfukdsh fidskfhhruifhiojewfkbfyvuhkgyubkewj</center></p>
+     <p class="navbar-text"><center>
+  <?php include 'Loremipsum.php'; ?>
+     </center></p>
      </div>
    <div class="col-md-1"></div>
      </div>
 
+<!-- Picture of the artist. -->
  <div class="row">
    <div class="col-md-1">
    </div>
@@ -62,6 +66,8 @@ include 'navbar.php';
    <img src="Kunst/Schilder/schilderDali.png" alt="schilderDali" style="width:100px;height:100px">
    </div>
   <div class="col-md-4">
+
+<!-- 4 pictures of the work of the artist. -->
     <a href="kunst1.jpg" class="thumbnail">
       <p>Kunst 1</p>
       <img src="kunst1.jpg" alt="kunst1" style="width:150px;height:150px">
@@ -100,16 +106,9 @@ include 'navbar.php';
     <br>
   </div>
 
-
 <div class="col-md-2">
    </div>
   </div>
-
-  
-
-      <!-- /BODY-->
-
-      <!-- NAV -->
 
 <?php include 'footer.php' ?>
 </ul>

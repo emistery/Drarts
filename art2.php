@@ -71,11 +71,11 @@
     </a>
   </div>
 
-
+<!-- A bit of information about the 1st 'Beeldend Kunstenaar'. -->
   <div class="pull-left"> <p class="navbar-text"> Tekst over Jansen.</p> </div>
+ </div>
 
-  </div>
-
+<!-- The 2nd 'Beeldend Kunstenaar'. If you click on the thumbnail you will be redirected to art_inside.php which will give you detailed information about the artist. -->
    <div class="row">
    <div class="col-md-1">
    </div>
@@ -86,6 +86,8 @@
       <br>
     </a>
   </div>
+
+<!-- The most familiar painting which belongs to the 2nd 'Beeldend Kunstenaar'. -->
   <div class="col-md-2">
     <a href="Kunst/Beeld/molin1.png" class="thumbnail">
       <p>molin1</p>
@@ -94,13 +96,14 @@
     </a>
   </div>
 
+<!-- A bit of information about the 2nd 'Beeldend Kunstenaar'. -->
   <div class="pull-left"> <p class="navbar-text"> Tekst over Molin.</p> </div>
 
 <div class="col-md-2">
    </div>
   </div>
 
-      <!-- /BODY-->
+<!-- The 3rd 'Beeldend Kunstenaar'. If you click on the thumbnail you will be redirected to art_inside.php which will give you detailed information about the artist. -->
    <div class="row">
    <div class="col-md-1">
    </div>
@@ -111,6 +114,8 @@
       <br>
     </a>
   </div>
+
+<!-- The most familiar painting which belongs to the 3rd 'Beeldend Kunstenaar'. -->
   <div class="col-md-2">
     <a href="Kunst/Beeld/sawaya1.png" class="thumbnail">
       <p>sawaya1</p>
@@ -121,6 +126,7 @@
     <br>
   </div>
 
+<!-- A bit of information about the 3rd 'Beeldend Kunstenaar'. -->
   <div class="pull-left"> <p class="navbar-text"> Tekst over Sawaya.</p> </div>
 
       <!-- NAV -->
