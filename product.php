@@ -53,10 +53,7 @@
     	<div class="col-md-3">
 			<div> 
 			<!--The following form is a mess to look at, because HTML treats whitespace between tags as actual space -->
-				<pre>
-                    Prijs:		€
-                    <?php
-					$ID = $_GET['name']; echo productPage($db, $ID)[2]; ?>		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><?php include 'price_total.php' ?>
+				<pre><br>Prijs:		€<?php $ID = $_GET['name']; echo productPage($db, $ID)[2]; ?>		<img src="shoppingcart.png" style="height:75px; width:75px"><br><br><?php include 'price_total.php' ?>
     			</pre>
     		</div>
     	</div>
