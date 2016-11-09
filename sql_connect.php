@@ -35,16 +35,8 @@ function artikelQuery($db){
 	$artikeldata = array($ID, $beschrijving, $prijs, $voorraad_aantal, $aantal_exemplaren, $voorraad_minimum_aantal, $afbeelding, $Kunstenaar_ID);
 	return $artikeldata;
 }
-// Example to query table
+// Example to query table where first integer is column number in database & 2nd is the result. This works for all table queries
 //echo artikelQuery($db)[0][0];
-
-//$key =  key(max(artikelQuery($db)[3]));
-//echo $key;
-//echo key(max(artikelQuery($db)));
-//$maxs = array_keys(artikelQuery($db)[3], max(artikelQuery($db)[3]));
-//echo $maxs;
-//print_r(artikelQuery($db)[3]);
-
 
 
 //$returnThis = array_search(max(artikelQuery($db)[3]),artikelQuery($db)[3]);
@@ -256,6 +248,7 @@ function searchQuery($db, $search){
 //print_r(searchQuery($db, "%" . "Schilderij" . "%")[1]);
 //echo searchQuery($db, "%" . $search . "%")[1][1];
 
+//function to display user data on account page
 function accountQuery($db, $username){
 	$query = "SELECT * FROM klant where gebruikersnaam = '$username'";
 	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
@@ -288,16 +281,19 @@ function accountQuery($db, $username){
 //6 = postal code
 //7 = city
 
+//function to update password
 function updatePass($username, $db, $newpassword){
 	$query =  "UPDATE klant SET wachtwoord = '$newpassword' WHERE gebruikersnaam = '$username'";
 	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
 }
 
+//function to update userdata
 function updateAccount($username, $db, $column, $data){
 	$query = "UPDATE klant SET '$column' = '$data' WHERE gebruikersnaam = '$username'";
 	mysqli_query($db, $query) or die ('Error querying database.'  . mysqli_error($db));
 }
 
+//function to display info on product page
 function productPage($db, $ID){
 	$query = "SELECT * FROM artikel where ID = $ID";
 	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));
@@ -319,16 +315,19 @@ function productPage($db, $ID){
 	return $productData;
 }
 }
+//productPage($db, $ID)[0]
+//SELECT product where $ID is the id number and the integer is the selected column
 
+//function to checkusername for registration
 function checkUsername($db, $gebruikersnaam, $wachtwoord, $naam, $adres, $postcode, $woonplaats, $emailadres, $leverancier){
 	$query = 	"INSERT INTO Klant
 				VALUES ('$gebruikersnaam', '$wachtwoord', '$naam', '$adres', '$postcode', '$woonplaats', '$emailadres', '$leverancier')";
 
 	mysqli_query($db, $query) or die('Inlognaam bestaat al');}
 
-//productPage($db, $ID)[0]
-//SELECT product where $ID is the id number and the integer is the selected column
 
+
+//function to add product
 function newProduct($db, $pID, $pName, $pPrice, $pImage, $pArtist){
 	$query = "INSERT INTO artikel (ID, beschrijving, prijs, afbeelding, Kunstenaar_ID) VALUES ($pID, '$pName', '$pPrice', '$pImage', $pArtist)";
 	mysqli_query($db, $query) or die('Error querying database.'  . mysqli_error($db));

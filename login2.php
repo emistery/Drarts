@@ -1,6 +1,6 @@
 <?php
 include 'sql_connect.php';
-
+// this file is a test, not used anymore
 $username = $_POST['gebruikernaam'];
 $password = $_POST['wachtwoord'];
 

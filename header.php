@@ -28,6 +28,7 @@ if(mysqli_connect_errno()){
         </div>
       </div>
 <?php 
+//checked if user is logged in, if yes, shopping cart, account & log out button are displayed. If not, only the log in button is displayed
        if (isset($_SESSION['authorized'])) {
        if ($_SESSION['authorized'] == 'TRUE') {
          include_once 'loggedin.php';
