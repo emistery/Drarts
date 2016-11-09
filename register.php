@@ -30,8 +30,7 @@
     	<!-- /NAVBAR-->
 
     	<!-- BODY-->
-
-    		<table><form class="form-horizontal" action="register.php" method="post"><font size="3">
+        <table><form class="form-horizontal" action="register.php" method="post"><font size="3">
 
  			<?php
 
