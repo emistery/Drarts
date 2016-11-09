@@ -30,6 +30,7 @@
     	<!-- /NAVBAR-->
 
     	<!-- BODY-->
+        <div><font color="white">Easter egg</font></div>
 
     		<table><form class="form-horizontal" action="register.php" method="post"><font size="3">
 
