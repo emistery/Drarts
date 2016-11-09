@@ -1,4 +1,5 @@
 <?php
+// this file is a test, not used anymore
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "";
